@@ -1,0 +1,54 @@
+.header {
+  padding: 20px 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header__menu-first {
+      display: flex;
+      align-items: center;
+      column-gap: 100px;
+      a {
+        color: #383634;
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      .menu {
+        &__list {
+          list-style-type: none;
+          display: flex;
+          align-items: center;
+          column-gap: 30px;
+          .menu__item {
+            a {
+              font-size: 18px;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              color: #383634;
+            }
+          }
+        }
+      }
+    }
+    .header__actions {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+    }
+  }
+}
+
+.collapsibles {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s ease, padding 0.3s ease;
+  padding: 0;
+}
+.active {
+  padding: 10px;
+  height: auto;
+}

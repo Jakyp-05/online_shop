@@ -1,0 +1,23 @@
+.callback-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  input {
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    border-right: 1px solid #383634;
+    font-size: 16px;
+    &::placeholder {
+      color: #383634;
+      font-size: 16px;
+    }
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #383634;
+    color: white;
+    border-radius: 10px;
+  }
+}

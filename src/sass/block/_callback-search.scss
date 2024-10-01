@@ -1,8 +1,10 @@
 .callback-search {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+  column-gap: 20px;
+  padding: 5px 20px;
+  background-color: white;
+  border-radius: 10px;
   input {
     width: 90%;
     height: 30px;
@@ -15,7 +17,7 @@
     }
   }
   button {
-    padding: 10px 20px;
+    padding: 5px 10px;
     background-color: #383634;
     color: white;
     border-radius: 10px;

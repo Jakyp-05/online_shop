@@ -38,17 +38,3 @@
     }
   }
 }
-
-.collapsibles {
-  margin-top: 20px;
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 0;
-  transition: height 0.3s ease, padding 0.3s ease;
-  padding: 0;
-}
-.active {
-  padding: 10px;
-  height: auto;
-}

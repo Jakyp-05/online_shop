@@ -1,0 +1,16 @@
+.products {
+  margin-bottom: 20px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .btn_product {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,7 +1,24 @@
 .btn {
   background-color: transparent;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+}
+
+.btn_cart {
+  background-color: #383634;
+  border: 2px solid #383634;
+}
+
+.btn_buy {
+  border: 2px solid #383634;
+  color: #383634;
+  margin-left: 10px;
+}
+
+.btn_view {
+  border: 2px solid #4c7c7d;
+  color: #4c7c7d;
 }

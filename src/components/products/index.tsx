@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../card";
+import { Link } from "react-router-dom";
 
 const Products: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Products: React.FC = () => {
         <ul className="card__list">
           <Card />
         </ul>
-        <button className="btn btn_product">View all products</button>
+        <Link to="/catalog" className="default-link default-link_top">View all products</Link>
       </div>
     </section>
   );

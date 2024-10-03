@@ -1,0 +1,54 @@
+// 1024px
+
+@media (max-width: 1024px) {
+  .products {
+    .container {
+      max-width: 960px;
+      width: 100%;
+    }
+  }
+}
+
+// 992px
+
+@media (max-width: 992px) {
+  .products {
+    .container {
+      max-width: 960px;
+      width: 100%;
+    }
+  }
+}
+
+// 992px
+
+@media (max-width: 768px) {
+  .products {
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+  }
+}
+
+// 425px
+
+@media (max-width: 425px) {
+  .products {
+    .container {
+      max-width: 375px;
+      width: 100%;
+    }
+  }
+}
+
+// 425px
+
+@media (max-width: 375px) {
+  .products {
+    .container {
+      max-width: 320px;
+      width: 100%;
+    }
+  }
+}

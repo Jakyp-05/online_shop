@@ -1,0 +1,29 @@
+// 425px
+
+@media (max-width: 425px) {
+  .callback-search {
+    width: 230px;
+    padding: 5px 10px;
+    justify-content: space-between;
+    column-gap: 0;
+    input {
+      width: 65%;
+    }
+    button {
+      padding: 6px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .callback-search {
+    width: 190px;
+    padding: 5px 10px;
+    justify-content: space-between;
+    column-gap: 0;
+    input {
+      width: 65%;
+    }
+  }
+}

@@ -37,7 +37,7 @@ export interface Product {
     qrCode: string;
   };
   thumbnail: string;
-  images: [];
+  images: string[];
 }
 
 export interface Products {

@@ -6,15 +6,16 @@ type IProps = {
 };
 
 const Card: React.FC<IProps> = ({ item }) => {
+  const hasImages = Array.isArray(item.images) && item.images.length > 0;
+  const imageUrl = hasImages
+    ? item.images[0]
+    : "/path/to/placeholder-image.jpg";
+
   return (
     <li className="card__item">
       <img
         className="card__image"
-        src={
-          Array.isArray(item.images) && item.images.length > 0
-            ? item.images[0]
-            : "/path/to/placeholder-image.jpg"
-        }
+        src={imageUrl}
         alt={item.title}
         loading="lazy"
       />

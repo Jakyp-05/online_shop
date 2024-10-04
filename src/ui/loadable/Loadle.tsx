@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 
 type IProps = {
-  factory: () => Promise<{ default: React.ComponentType<any> }>;
+  factory: () => Promise<{ default: React.ComponentType }>;
 };
 
 const Loadle: React.FC<IProps> = ({ factory }) => {

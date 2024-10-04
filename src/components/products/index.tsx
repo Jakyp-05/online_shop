@@ -6,6 +6,7 @@ import CardSkeleton from "../cardSkeleton";
 
 const Products: React.FC = () => {
   const { product, status, error } = useProduct();
+  if (error) return <div>Error {error}</div>;
   return (
     <section className="products">
       <div className="container">

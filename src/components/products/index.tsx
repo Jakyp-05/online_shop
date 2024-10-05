@@ -14,7 +14,7 @@ const Products: React.FC = () => {
         <ul className="card__list">
           {status === "loading" && <CardSkeleton props={6} />}
           {product.slice(0, 6).map((item) => (
-            <Card item={item} />
+            <Card key={item.id} item={item} />
           ))}
         </ul>
         <Link to="/catalog" className="default-link default-link_top">

@@ -10,8 +10,8 @@ const CardSkeleton: React.FC<IProps> = ({ props }) => (
     {[...Array(props)].map((_, index) => (
       <ContentLoader
         speed={2}
-        width="auto"
-        height="auto"
+        width="430"
+        height="500"
         viewBox="0 0 630 610"
         backgroundColor="#f3f3f3"
         foregroundColor="#ecebeb"

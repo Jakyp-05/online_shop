@@ -22,7 +22,7 @@ const Card: React.FC<IProps> = ({ item }) => {
       <div className="card__content">
         <div className="card__title">
           <h2>{item.title}</h2>
-          <button className="btn btn_view">View details</button>
+          <button className="btn btn_view">View</button>
         </div>
         <span className="card__price">$ {item.price}</span>
         <p className="card__text">{item.description}</p>

@@ -1,7 +1,7 @@
 import Loadle from "../ui/loadable/Loadle";
 
 const useRoutes = () => {
-  const Catalog = Loadle({ factory: () => import("../pages/Catalog") });
+  const Catalog = Loadle({ factory: () => import("../pages/CatalogPage") });
   const NotFound = Loadle({ factory: () => import("../pages/NotFound") });
   const ErrorBoundary = Loadle({
     factory: () => import("../ui/fallback/ErrorBoundary"),

@@ -1,0 +1,96 @@
+.productId {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .productId__content {
+      width: 600px;
+      height: auto;
+      padding: 10px;
+      .productId__content__top {
+        padding-bottom: 30px;
+        h2 {
+          margin-bottom: 15px;
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+        strong {
+          font-size: 20px;
+        }
+        .prodcustId__rating-reviews {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+          span {
+            font-size: 18px;
+          }
+          a {
+            font-size: 18px;
+          }
+          .rating-plus {
+            color: green;
+          }
+          .rating-minus {
+            color: #e45959;
+          }
+        }
+        p {
+          font-size: 20px;
+          font-weight: 500;
+          span {
+            margin-left: 10px;
+            color: #e45959;
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+      }
+      .productId__content__bottom {
+        .productId__price-discount {
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+          margin-bottom: 20px;
+          p {
+            font-size: 20px;
+            color: #383634;
+          }
+          span {
+            font-size: 16px;
+            color: #edeae7;
+            padding: 5px;
+            background-color: #e45959;
+            border-radius: 3px;
+            font-weight: 500;
+          }
+        }
+        .productId__size {
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+
+          p {
+            font-size: 20px;
+            span {
+              margin-left: 10px;
+              font-size: 18px;
+              font-weight: 600;
+              color: #383634;
+            }
+          }
+        }
+      }
+    }
+    .productId__image {
+      width: 600px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

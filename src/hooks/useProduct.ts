@@ -7,6 +7,11 @@ const useProduct = () => {
   const product = useAppSelector((state) => state.product);
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
     dispatch(getAllProductsAction());
   }, [dispatch]);
 

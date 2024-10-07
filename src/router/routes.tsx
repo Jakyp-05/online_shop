@@ -6,7 +6,7 @@ import useRoute from "../hooks/useRoute";
 import HomePage from "../pages/HomePage";
 
 const MyRoutes = () => {
-  const { Catalog, NotFound, ErrorBoundary } = useRoute();
+  const { Catalog, NotFound, ErrorBoundary, ProductId } = useRoute();
   return useRoutes([
     {
       element: <Layout />,
@@ -17,8 +17,16 @@ const MyRoutes = () => {
           element: <HomePage />,
         },
         {
+          path: "/:id",
+          element: ProductId,
+        },
+        {
           path: "/catalog",
           element: Catalog,
+        },
+        {
+          path: "/catalog/:id",
+          element: ProductId
         },
         {
           path: "*",

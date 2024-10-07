@@ -6,7 +6,10 @@ const useRoutes = () => {
   const ErrorBoundary = Loadle({
     factory: () => import("../ui/fallback/ErrorBoundary"),
   });
-  return {Catalog, NotFound, ErrorBoundary };
+  const ProductId = Loadle({
+    factory: () => import("../components/productId"),
+  });
+  return { Catalog, NotFound, ErrorBoundary, ProductId };
 };
 
 export default useRoutes;

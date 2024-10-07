@@ -18,7 +18,7 @@ const Catalog: React.FC = () => {
           <ul className="card__list catalog_card-list">
             {status === "loading" && <CardSkeleton props={6} />}
             {product.map((item) => (
-              <Card key={item.id} item={item} />
+              <Card key={item.id} item={item} isCatalog={true}/>
             ))}
           </ul>
         </div>

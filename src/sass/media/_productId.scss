@@ -1,0 +1,81 @@
+// 1024px
+
+@media (max-width: 1024px) {
+  .productId {
+    max-width: 1024px;
+    width: 100%;
+    .container {
+      max-width: 960px;
+      width: 100%;
+    }
+  }
+}
+
+// 992px
+
+@media (max-width: 992px) {
+  .productId {
+    max-width: 992px;
+    width: 100%;
+    .container {
+      max-width: 960px;
+      width: 100%;
+    }
+  }
+}
+
+// 768px
+
+@media (max-width: 768px) {
+  .productId {
+    max-width: 768px;
+    width: 100%;
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+  }
+}
+
+// 425px
+
+@media (max-width: 425px) {
+  .productId {
+    max-width: 425px;
+    width: 100%;
+    .container {
+      max-width: 375px;
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      .productId__content {
+        max-width: 375px;
+        padding: 20px;
+      }
+      .productId__image {
+        max-width: 375px;
+      }
+    }
+  }
+}
+
+// 425px
+
+@media (max-width: 375px) {
+  .productId {
+    max-width: 375px;
+    width: 100%;
+    .container {
+      max-width: 320px;
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      .productId__content {
+        max-width: 320px;
+      }
+      .productId__image {
+        max-width: 420px;
+      }
+    }
+  }
+}

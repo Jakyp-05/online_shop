@@ -2,7 +2,8 @@ import React from "react";
 import useProductId from "../../hooks/useProductId";
 
 const ProductId: React.FC = () => {
-  const { product, error } = useProductId();
+  const isCatalog = location.pathname.includes("/catalog");
+  const { product, error, handleCloseRoute } = useProductId(isCatalog);
   const hasImages = Array.isArray(product?.images) && product.images.length > 0;
   const imageUrl = hasImages
     ? product.images[0]
@@ -50,6 +51,12 @@ const ProductId: React.FC = () => {
               <p>
                 depth: <span>{product?.dimensions.depth}</span>
               </p>
+            </div>
+            <div className="productId__btns">
+              <button className="btn btn_cart">Add To Cart</button>
+              <button className="btn btn_close" onClick={handleCloseRoute}>
+                Close
+              </button>
             </div>
           </div>
         </div>

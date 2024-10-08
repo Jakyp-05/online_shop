@@ -1,10 +1,10 @@
 import React from "react";
-import Product from "../products";
+import Products from "../products";
 
 const HomeCom: React.FC = () => {
   return (
     <main>
-      <Product />
+      <Products />
     </main>
   );
 };

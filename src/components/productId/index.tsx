@@ -61,12 +61,7 @@ const ProductId: React.FC = () => {
           </div>
         </div>
         <div className="productId__image">
-          <img
-            width={"300px"}
-            height={"300px"}
-            src={imageUrl}
-            alt={product?.title}
-          />
+          <img src={imageUrl} alt={product?.title} />
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ import useProduct from "../../hooks/useProduct";
 import CardSkeleton from "../cardSkeleton";
 
 const Products: React.FC = () => {
-  const { product, status, error } = useProduct();
+  const { products, status, error } = useProduct();
   if (error) return <div>Error {error}</div>;
   return (
     <section className="products">
@@ -13,7 +13,7 @@ const Products: React.FC = () => {
         <h2>Our Products</h2>
         <ul className="card__list">
           {status === "loading" && <CardSkeleton props={6} />}
-          {product.slice(0, 6).map((item) => (
+          {products.slice(0, 6).map((item) => (
             <Card key={item.id} item={item} />
           ))}
         </ul>

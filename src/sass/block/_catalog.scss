@@ -10,13 +10,6 @@
       display: grid;
       grid-template-areas: "menu__categories card__list";
       gap: 20px;
-      .menu__categories {
-        position: sticky;
-        top: 0;
-        width: 300px;
-        height: 300px;
-        border: 1px solid black;
-      }
     }
   }
 }

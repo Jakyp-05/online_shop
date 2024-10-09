@@ -16,7 +16,7 @@ const useProduct = () => {
   }, [dispatch]);
 
   return {
-    product: product.products,
+    products: product.products,
     status: product.status,
     error: product.error,
   };

@@ -61,7 +61,7 @@ const ProductId: React.FC = () => {
           </div>
         </div>
         <div className="productId__image">
-          <img src={imageUrl} alt={product?.title} />
+          <img src={imageUrl} alt={product?.title} loading="lazy" />
         </div>
       </div>
     </section>

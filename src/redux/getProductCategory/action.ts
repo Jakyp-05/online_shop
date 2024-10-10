@@ -1,9 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import {Product } from "../../interface";
+import { Products } from "../../interface";
 import { getProductsCategory } from "./api";
 
-export const getProductsCategoryAction = createAsyncThunk<Product[], string>(
+export const getProductsCategoryAction = createAsyncThunk<Products, string>(
   "category",
   async (category: string, { rejectWithValue }) => {
     try {

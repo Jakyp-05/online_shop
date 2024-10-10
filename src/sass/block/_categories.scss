@@ -9,7 +9,11 @@
   overflow-y: scroll;
   li {
     margin: 10px 0;
+    padding: 5px 10px;
     font-size: 20px;
     cursor: pointer;
+  }
+  .active {
+    background-color: rgb(204, 200, 200);
   }
 }

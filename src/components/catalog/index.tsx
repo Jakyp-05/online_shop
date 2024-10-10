@@ -5,20 +5,14 @@ import useCategories from "../../hooks/useCategories";
 import CardSkeleton from "../cardSkeleton";
 import Card from "../card";
 import CategoriesCom from "../categories";
-import { useAppDispatch } from "../../redux/store";
-import { getProductsCategoryAction } from "../../redux/getProductCategory/action";
+import useCategoryParoducts from "../../hooks/useCategoryParoducts";
 
 const Catalog: React.FC = () => {
-  const dispatch = useAppDispatch();
   const { products, status, error } = useProduct();
   const { categories } = useCategories();
+  const { seletectedCategory, handleFilterCategory } = useCategoryParoducts();
 
   if (error) return <div>Error {error}</div>;
-
-  const handleFilterCategory = (category: string) => {
-    console.log(category);
-    dispatch(getProductsCategoryAction(category));
-  };
 
   return (
     <section className="catalog">
@@ -34,11 +28,15 @@ const Catalog: React.FC = () => {
                 key={index}
                 category={category}
                 handleFilterCategory={handleFilterCategory}
+                isSelected={category.name === seletectedCategory}
               />
             ))}
           </ul>
           <ul className="card__list catalog_card-list">
             {status === "loading" && <CardSkeleton props={6} />}
+            {products.length === 0 && status === "succeeded" && (
+              <div>Товары не найдены</div>
+            )}
             {products.map((item) => (
               <Card key={item.id} item={item} isCatalog={true} />
             ))}

@@ -1,7 +1,7 @@
-import { Product } from "../../interface";
+import { Products } from "../../interface";
 
 export interface categoryState {
-  product: Product[];
+  products: Products;
   status: "idle" | "loading" | "succeeded" | "failed";
   error: string | null;
 }

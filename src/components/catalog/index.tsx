@@ -6,11 +6,12 @@ import CardSkeleton from "../cardSkeleton";
 import Card from "../card";
 import CategoriesCom from "../categories";
 import useCategoryParoducts from "../../hooks/useCategoryParoducts";
+import { Link } from "react-router-dom";
 
 const Catalog: React.FC = () => {
   const { products, status, error } = useProduct();
   const { categories } = useCategories();
-  const { seletectedCategory, handleFilterCategory } = useCategoryParoducts();
+  const { selectedCategory, handleFilterCategory } = useCategoryParoducts();
 
   if (error) return <div>Error {error}</div>;
 
@@ -18,17 +19,27 @@ const Catalog: React.FC = () => {
     <section className="catalog">
       <div className="container catalog__container">
         <div className="catalog__top">
-          <h2>Categories</h2>
+          <div className="catalog__menu">
+            <h2>Categories</h2>
+            <div className="burger-menu__categories">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
           <h2>Sort by</h2>
         </div>
         <div className="catalog__sidebar">
           <ul className="menu__categories">
+            <li>
+              <Link to="/catalog">All</Link>
+            </li>
             {categories.map((category, index) => (
               <CategoriesCom
                 key={index}
                 category={category}
                 handleFilterCategory={handleFilterCategory}
-                isSelected={category.name === seletectedCategory}
+                isSelected={category.name === selectedCategory}
               />
             ))}
           </ul>

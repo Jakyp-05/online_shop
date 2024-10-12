@@ -4,6 +4,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      .catalog__menu {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+      }
     }
     .catalog__sidebar {
       margin-top: 30px;

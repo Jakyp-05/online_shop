@@ -35,9 +35,12 @@
     .catalog__container {
       max-width: 720px;
       width: 100%;
+      .menu__categories {
+        display: none;
+      }
       .catalog_card-list {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   }
@@ -51,13 +54,6 @@
       max-width: 375px;
       width: 100%;
       position: relative;
-      .menu__categories {
-        background-color: red;
-        color: white;
-        position: absolute;
-        z-index: 9;
-        display: none;
-      }
       .catalog_card-list {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

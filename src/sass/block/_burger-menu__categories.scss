@@ -1,0 +1,22 @@
+.burger-menu__categories {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  span {
+    width: 100%;
+    border: 1px solid black;
+    display: none;
+    &:first-child {
+      position: absolute;
+      top: 0;
+    }
+    &:last-child {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}

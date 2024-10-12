@@ -26,7 +26,11 @@ const MyRoutes = () => {
         },
         {
           path: "/catalog/:id",
-          element: ProductId
+          element: ProductId,
+        },
+        {
+          path: "/catalog/categories/:category",
+          element: Catalog,
         },
         {
           path: "*",

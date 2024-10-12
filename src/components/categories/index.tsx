@@ -10,14 +10,10 @@ type IProps = {
 const CategoriesCom: React.FC<IProps> = ({
   category,
   handleFilterCategory,
-  isSelected,
 }) => {
   return (
     <React.Fragment>
-      <li
-        onClick={() => handleFilterCategory(category.name)}
-        className={isSelected ? "active" : ""}
-      >
+      <li onClick={() => handleFilterCategory(category.name)}>
         {category.name}
       </li>
     </React.Fragment>

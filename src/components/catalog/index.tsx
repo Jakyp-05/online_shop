@@ -27,24 +27,26 @@ const Catalog: React.FC = () => {
         <div className="catalog__top">
           <div className="catalog__menu">
             <h2>Categories</h2>
-            <MenuButton onclick={activeCategory}/>
-            <ul
-              className={`menu__categories menu__categories__mobile ${
-                categoryOpen ? "menu__categories__mobile__active" : ""
-              }`}
-            >
-              <li>
-                <Link to="/catalog">All</Link>
-              </li>
-              {categories.map((category, index) => (
-                <CategoriesCom
-                  key={index}
-                  category={category}
-                  handleFilterCategory={handleFilterCategory}
-                  isSelected={category.name === selectedCategory}
-                />
-              ))}
-            </ul>
+            <div className="catalog__menu-burger">
+              <MenuButton onclick={activeCategory} />
+              <ul
+                className={`menu__categories__mobile ${
+                  categoryOpen ? "menu__categories__mobile__active" : ""
+                }`}
+              >
+                <li>
+                  <Link to="/catalog">All</Link>
+                </li>
+                {categories.map((category, index) => (
+                  <CategoriesCom
+                    key={index}
+                    category={category}
+                    handleFilterCategory={handleFilterCategory}
+                    isSelected={category.name === selectedCategory}
+                  />
+                ))}
+              </ul>
+            </div>
           </div>
           <h2>Sort by</h2>
         </div>

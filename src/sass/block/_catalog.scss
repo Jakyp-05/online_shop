@@ -8,6 +8,9 @@
         display: flex;
         align-items: center;
         column-gap: 20px;
+        .catalog__menu-burger {
+          display: none;
+        }
       }
     }
     .catalog__sidebar {

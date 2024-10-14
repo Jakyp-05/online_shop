@@ -38,6 +38,16 @@
       .menu__categories {
         display: none;
       }
+      .menu__categories__mobile {
+        display: none;
+        position: absolute;
+        top: 50px;
+        background-color: white;
+        border: none;
+      }
+      .menu__categories__mobile__active {
+        display: block;
+      }
       .catalog_card-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

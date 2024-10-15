@@ -1,11 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { productsState } from "./type";
 import { getAllProductsAction } from "./action";
-import { Products } from "../../interface";
+import { Product, Products } from "../../interface";
 import { getProductsCategoryAction } from "../getProductCategory/action";
+import { getProductSortAction } from "../getProductSort/action";
 
 const initialState: productsState = {
   products: [],
+  sortBy: "",
+  order: "asc",
   total: 0,
   skip: 0,
   limit: 30,
@@ -16,7 +19,15 @@ const initialState: productsState = {
 const productSlice = createSlice({
   name: "products",
   initialState,
-  reducers: {},
+  reducers: {
+    setSortBy: (
+      state,
+      action: PayloadAction<{ sortBy: string; order: "asc" | "desc" }>
+    ) => {
+      state.sortBy = action.payload.sortBy;
+      state.order = action.payload.order;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getAllProductsAction.pending, (state) => {
@@ -49,8 +60,23 @@ const productSlice = createSlice({
       .addCase(getProductsCategoryAction.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message || "Failed to fetch category";
+      })
+      .addCase(getProductSortAction.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(
+        getProductSortAction.fulfilled,
+        (state, action: PayloadAction<Product[]>) => {
+          state.status = "succeeded";
+          state.products = action.payload;
+        }
+      )
+      .addCase(getProductSortAction.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message || "Failed to sort products";
       });
   },
 });
 
+export const { setSortBy } = productSlice.actions;
 export default productSlice.reducer;

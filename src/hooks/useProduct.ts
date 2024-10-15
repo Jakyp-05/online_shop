@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../redux/store";
 import { getAllProductsAction } from "../redux/getProducts/action";
+import { getProductSortAction } from "../redux/getProductSort/action";
 
 const useProduct = () => {
   const dispatch = useAppDispatch();
-  const product = useAppSelector((state) => state.product);
+  const { products, status, error, sortBy, order } = useAppSelector(
+    (state) => state.products
+  );
 
   useEffect(() => {
     window.scrollTo({
@@ -13,12 +16,13 @@ const useProduct = () => {
       behavior: "smooth",
     });
     dispatch(getAllProductsAction());
-  }, [dispatch]);
+    dispatch(getProductSortAction({ sortBy, order }));
+  }, [dispatch, sortBy, order]);
 
   return {
-    products: product.products,
-    status: product.status,
-    error: product.error,
+    products,
+    status,
+    error,
   };
 };
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getProductsCategoryAction } from "../redux/getProductCategory/action";
 import { useAppDispatch } from "../redux/store";
 import { useNavigate, useParams } from "react-router-dom";
+import { getAllProductsAction } from "../redux/getProducts/action";
 
 const useCategoryParoducts = () => {
   const dispatch = useAppDispatch();
@@ -24,7 +25,13 @@ const useCategoryParoducts = () => {
     }
   };
 
-  return { selectedCategory, handleFilterCategory };
+  const resetCategoryFilter = () => {
+    setSelectedCategory("");
+    navigate("/catalog", { replace: true });
+    dispatch(getAllProductsAction());
+  };
+
+  return { selectedCategory, handleFilterCategory, resetCategoryFilter };
 };
 
 export default useCategoryParoducts;

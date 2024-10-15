@@ -8,12 +8,14 @@ import CategoriesCom from "../categories";
 import useCategoryParoducts from "../../hooks/useCategoryParoducts";
 import { Link } from "react-router-dom";
 import MenuButton from "../../ui/menuButton";
+import Sort from "../sort";
 
 const Catalog: React.FC = () => {
   const { products, status, error } = useProduct();
   const { categories } = useCategories();
   const [categoryOpen, setCategoryOpen] = useState<boolean>(false);
-  const { selectedCategory, handleFilterCategory } = useCategoryParoducts();
+  const { selectedCategory, handleFilterCategory, resetCategoryFilter } =
+    useCategoryParoducts();
 
   if (error) return <div>Error {error}</div>;
 
@@ -48,12 +50,17 @@ const Catalog: React.FC = () => {
               </ul>
             </div>
           </div>
-          <h2>Sort by</h2>
+          <div className="sort">
+            <h2>Sort by</h2>
+            <Sort />
+          </div>
         </div>
         <div className="catalog__sidebar">
           <ul className="menu__categories">
             <li>
-              <Link to="/catalog">All</Link>
+              <Link to="/catalog" onClick={resetCategoryFilter}>
+                All
+              </Link>
             </li>
             {categories.map((category, index) => (
               <CategoriesCom

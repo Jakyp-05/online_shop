@@ -1,19 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
+import useMenuButton from "../../hooks/useMenuButton";
 
 type IProps = {
   onclick: () => void;
 };
 
 const MenuButton: React.FC<IProps> = ({ onclick }) => {
-  const [opened, setOpened] = useState<boolean>(false);
-
-  const toggleMenu = () => {
-    setOpened(!opened);
-    onclick();
-  };
+  const { ref, toggleMenu, opened } = useMenuButton(onclick);
 
   return (
     <button
+      ref={ref}
       className={`menu ${opened ? "opened" : ""}`}
       onClick={toggleMenu}
       aria-label="Main Menu"

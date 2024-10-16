@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+
 import useSort from "../../hooks/useSort";
+import { SortData } from "../../data/sort";
 
 const Sort: React.FC = () => {
-  const [openSort, setOpenSort] = useState<boolean>(false);
-  const { handleSort } = useSort();
-
-  const handleOpenSort = () => {
-    setOpenSort(!openSort);
-  };
+  const { openSort, handleOpenSort, ref, handleSortClick } = useSort();
 
   return (
     <>
@@ -25,11 +22,12 @@ const Sort: React.FC = () => {
         </span>
       </div>
       {openSort && (
-        <ul className="sort__desc">
-          <li onClick={() => handleSort("name-asc")}>A to Z</li>
-          <li onClick={() => handleSort("name-desc")}>Z to A</li>
-          <li onClick={() => handleSort("price-asc")}>low to high</li>
-          <li onClick={() => handleSort("price-desc")}>high to low</li>
+        <ul ref={ref} className="sort__desc">
+          {SortData.map((item) => (
+            <li key={item.id} onClick={() => handleSortClick(item.sortText)}>
+              {item.text}
+            </li>
+          ))}
         </ul>
       )}
     </>

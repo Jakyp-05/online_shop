@@ -1,27 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import useProduct from "../../hooks/useProduct";
 import useCategories from "../../hooks/useCategories";
+import useCategoryParoducts from "../../hooks/useCategoryParoducts";
+import MenuButton from "../../ui/menuButton";
 
 import CardSkeleton from "../cardSkeleton";
 import Card from "../card";
 import CategoriesCom from "../categories";
-import useCategoryParoducts from "../../hooks/useCategoryParoducts";
-import { Link } from "react-router-dom";
-import MenuButton from "../../ui/menuButton";
+
 import Sort from "../sort";
 
 const Catalog: React.FC = () => {
   const { products, status, error } = useProduct();
   const { categories } = useCategories();
-  const [categoryOpen, setCategoryOpen] = useState<boolean>(false);
-  const { selectedCategory, handleFilterCategory, resetCategoryFilter } =
-    useCategoryParoducts();
+  const {
+    ref,
+    categoryOpen,
+    selectedCategory,
+    handleFilterCategory,
+    resetCategoryFilter,
+    activeCategory,
+  } = useCategoryParoducts();
 
   if (error) return <div>Error {error}</div>;
-
-  const activeCategory = () => {
-    setCategoryOpen(!categoryOpen);
-  };
 
   return (
     <section className="catalog">
@@ -32,12 +34,15 @@ const Catalog: React.FC = () => {
             <div className="catalog__menu-burger">
               <MenuButton onclick={activeCategory} />
               <ul
+                ref={ref}
                 className={`menu__categories__mobile ${
                   categoryOpen ? "menu__categories__mobile__active" : ""
                 }`}
               >
                 <li>
-                  <Link to="/catalog">All</Link>
+                  <Link to="/catalog" onClick={resetCategoryFilter}>
+                    All
+                  </Link>
                 </li>
                 {categories.map((category, index) => (
                   <CategoriesCom

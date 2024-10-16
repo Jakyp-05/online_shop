@@ -52,3 +52,9 @@ export interface Categories {
   name: string;
   url: string;
 }
+
+export interface Sort {
+  id: number;
+  text: string;
+  sortText: string;
+}

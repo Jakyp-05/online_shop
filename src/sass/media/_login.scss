@@ -1,0 +1,21 @@
+@media (max-width: 425px) {
+  .login {
+    &__container {
+      height: 70vh;
+      .login__form {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .login {
+    &__container {
+      height: 70vh;
+      .login__form {
+        width: 280px;
+      }
+    }
+  }
+}

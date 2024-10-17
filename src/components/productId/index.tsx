@@ -4,6 +4,7 @@ import useProductId from "../../hooks/useProductId";
 const ProductId: React.FC = () => {
   const isCatalog = location.pathname.includes("/catalog");
   const { product, error, handleCloseRoute } = useProductId(isCatalog);
+  
   const hasImages = Array.isArray(product?.images) && product.images.length > 0;
   const imageUrl = hasImages
     ? product.images[0]

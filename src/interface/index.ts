@@ -58,3 +58,8 @@ export interface Sort {
   text: string;
   sortText: string;
 }
+
+export interface IFormInput {
+  username: string;
+  password: string;
+}

@@ -19,11 +19,11 @@ const Header: React.FC = () => {
           </nav>
         </div>
         <div className="header__actions">
-          <div className="header__login">
-            <Link to="/login">Login</Link>
-          </div>
           <div className="header__cart">
             <Link to="/cart">My Cart: (1)</Link>
+          </div>
+          <div className="header__login">
+            <Link to="/login">Login</Link>
           </div>
         </div>
       </div>

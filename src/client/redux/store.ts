@@ -9,7 +9,6 @@ import productIdSlice from "./getProductId/slice";
 export const store = configureStore({
   reducer: {
     categories: categoriesSlice,
-    // category: categorySlice,
     products: productSlice,
     productId: productIdSlice,
   },

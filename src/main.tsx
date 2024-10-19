@@ -4,8 +4,11 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import App from "./App.tsx";
-import { store } from "./redux/store.ts";
-import "./sass/styles.scss";
+
+import { store } from "./client/redux/store.ts";
+
+import "./client/sass/styles.scss";
+import "./admin/scss/styles.scss";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

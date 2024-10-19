@@ -1,4 +1,4 @@
-import { apiRoot } from "../../api/api";
+import { apiRoot } from "../../../api/api";
 import { Products } from "../../interface";
 
 export const getAllProducts = async (): Promise<Products> => {

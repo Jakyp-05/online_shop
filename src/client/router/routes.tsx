@@ -1,19 +1,21 @@
-import { useRoutes } from "react-router-dom";
+import { RouteObject } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import useRoute from "../hooks/useRoute";
 
 // Route
 import HomePage from "../pages/HomePage";
 
-const MyRoutes = () => {
+const clientRoutes = (): RouteObject[] => {
   const { Catalog, NotFound, ErrorBoundary, ProductId, LoginPage } = useRoute();
-  return useRoutes([
+
+  return [
     {
+      path: "/",
       element: <Layout />,
       errorElement: ErrorBoundary,
       children: [
         {
-          path: "/",
+          index: true,
           element: <HomePage />,
         },
         {
@@ -42,7 +44,7 @@ const MyRoutes = () => {
         },
       ],
     },
-  ]);
+  ];
 };
 
-export default MyRoutes;
+export default clientRoutes;

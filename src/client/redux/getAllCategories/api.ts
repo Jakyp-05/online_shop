@@ -1,4 +1,4 @@
-import { apiRoot } from "../../api/api";
+import { apiRoot } from "../../../api/api";
 import { Categories } from "../../interface";
 
 export const getAllCategories = async (): Promise<Categories[]> => {

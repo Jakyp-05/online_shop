@@ -1,5 +1,5 @@
-import MyRoutes from "./router/routes";
 import { withErrorBoundary } from "react-error-boundary";
+import MyRoutes from "./routes";
 
 function App() {
   return <MyRoutes />;

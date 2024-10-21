@@ -1,6 +1,6 @@
 import Loadle from "../../loadable/Loadle";
 
-const useRoutes = () => {
+const useRouters = () => {
   const AdminHomePage = Loadle({
     factory: () => import("../pages/AdminHomePage"),
   });
@@ -10,7 +10,12 @@ const useRoutes = () => {
   const AdminSettinsPage = Loadle({
     factory: () => import("../pages/AdminSettinsPage"),
   });
-  return { AdminHomePage, AdminProductsPage, AdminSettinsPage };
+
+  const ErrorBoundary = Loadle({
+    factory: () => import("../../errorElement"),
+  });
+
+  return { AdminHomePage, AdminProductsPage, AdminSettinsPage, ErrorBoundary };
 };
 
-export default useRoutes;
+export default useRouters;

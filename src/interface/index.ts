@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 interface review {
   rating: number;
   comment: string;
@@ -68,4 +70,10 @@ export interface Sidebar {
   id: number;
   menuText: string;
   menuLink: string;
+}
+
+export interface Routes {
+  id: number;
+  path: string;
+  element: ReactNode;
 }

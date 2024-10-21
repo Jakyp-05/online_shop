@@ -1,27 +1,19 @@
 import { RouteObject } from "react-router-dom";
 import Layout from "../components/layout";
-import useRoutes from "../hooks/useRouters";
+import { routesData } from "../../data/routesData";
+import useRouters from "../hooks/useRouters";
 
 const adminRoutes = (): RouteObject[] => {
-  const { AdminHomePage, AdminProductsPage, AdminSettinsPage } = useRoutes();
+  const { ErrorBoundary } = useRouters();
   return [
     {
       path: "/admin",
       element: <Layout />,
-      children: [
-        {
-          path: "/admin/home",
-          element: AdminHomePage,
-        },
-        {
-          path: "/admin/products",
-          element: AdminProductsPage,
-        },
-        {
-          path: "/admin/settins",
-          element: AdminSettinsPage,
-        },
-      ],
+      errorElement: ErrorBoundary,
+      children: routesData.map(({ path, element }) => ({
+        path,
+        element,
+      })),
     },
   ];
 };

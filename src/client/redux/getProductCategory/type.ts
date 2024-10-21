@@ -1,4 +1,4 @@
-import { Products } from "../../interface";
+import { Products } from "../../../interface";
 
 export interface categoryState {
   products: Products;

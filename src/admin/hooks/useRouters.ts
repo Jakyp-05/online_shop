@@ -7,10 +7,10 @@ const useRoutes = () => {
   const AdminProductsPage = Loadle({
     factory: () => import("../pages/AdminProductsPage"),
   });
-  const AdminProfilePage = Loadle({
-    factory: () => import("../pages/AdminProfilePage"),
+  const AdminSettinsPage = Loadle({
+    factory: () => import("../pages/AdminSettinsPage"),
   });
-  return { AdminHomePage, AdminProductsPage, AdminProfilePage };
+  return { AdminHomePage, AdminProductsPage, AdminSettinsPage };
 };
 
 export default useRoutes;

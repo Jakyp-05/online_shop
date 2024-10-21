@@ -1,6 +1,6 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ChangeEvent, useState } from "react";
-import { IFormInput } from "../interface";
+import { IFormInput } from "../../interface";
 import { useForm } from "react-hook-form";
 import { schema } from "./yup";
 

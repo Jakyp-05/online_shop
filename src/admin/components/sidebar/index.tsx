@@ -1,19 +1,20 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import { SidebarData } from "../../../data/sidebar";
 
 const Sidebar: React.FC = () => {
   return (
-    <div>
-      <div className="sidebar">
-        <Link to={"/admin/home"}>Home</Link>
-        <Link to={"/admin/products"}>Ptoducts</Link>
-        <Link to={"/admin/profile"}>Profile</Link>
-      </div>
-
-      <div className="content">
-        <Outlet />
-      </div>
-    </div>
+    <section className="sidebar">
+      <Link to={"/admin/home"}>Logo</Link>
+      <ul className="sidebar__menu">
+        {SidebarData.map((el) => (
+          <li key={el.id}>
+            <Link to={el.menuLink}>{el.menuText}</Link>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
 

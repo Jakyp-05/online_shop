@@ -1,5 +1,5 @@
 import React from "react";
-import { Product } from "../../interface";
+import { Product } from "../../../interface";
 import { useNavigate } from "react-router-dom";
 
 type IProps = {

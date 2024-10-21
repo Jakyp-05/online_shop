@@ -1,5 +1,5 @@
 import { apiRoot } from "../../../api/api";
-import { Product } from "../../interface";
+import { Product } from "../../../interface";
 
 export const getProductSort = async ({
   sortBy,

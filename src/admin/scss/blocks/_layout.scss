@@ -1,0 +1,12 @@
+.layout {
+  display: flex;
+  height: 100%;
+  .layout__header {
+    width: 80%;
+    padding: 20px;
+    .layout__content {
+      flex: 1;
+      padding: 20px;
+    }
+  }
+}

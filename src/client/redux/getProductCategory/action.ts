@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import { Products } from "../../interface";
+import { Products } from "../../../interface";
 import { getProductsCategory } from "./api";
 
 export const getProductsCategoryAction = createAsyncThunk<Products, string>(

@@ -1,5 +1,5 @@
 import React from "react";
-import { Categories } from "../../interface";
+import { Categories } from "../../../interface";
 
 type IProps = {
   category: Categories;

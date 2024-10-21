@@ -1,10 +1,9 @@
 import { RouteObject } from "react-router-dom";
 import Layout from "../components/layout";
-import AdminHomePage from "../pages/AdminHomePage";
-import AdminProductsPage from "../pages/AdminProductsPage";
-import AdminProfilePage from "../pages/AdminProfilePage";
+import useRoutes from "../hooks/useRouters";
 
 const adminRoutes = (): RouteObject[] => {
+  const { AdminHomePage, AdminProductsPage, AdminSettinsPage } = useRoutes();
   return [
     {
       path: "/admin",
@@ -12,15 +11,15 @@ const adminRoutes = (): RouteObject[] => {
       children: [
         {
           path: "/admin/home",
-          element: <AdminHomePage />,
+          element: AdminHomePage,
         },
         {
           path: "/admin/products",
-          element: <AdminProductsPage />,
+          element: AdminProductsPage,
         },
         {
-          path: "/admin/profile",
-          element: <AdminProfilePage />,
+          path: "/admin/settins",
+          element: AdminSettinsPage,
         },
       ],
     },

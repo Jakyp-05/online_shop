@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { productsState } from "./type";
 import { getAllProductsAction } from "./action";
-import { Product, Products } from "../../interface";
+import { Product, Products } from "../../../interface";
 import { getProductsCategoryAction } from "../getProductCategory/action";
 import { getProductSortAction } from "../getProductSort/action";
 

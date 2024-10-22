@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useOutSideClick from "./useOutSideClick";
+import useOutSideClick from "../../hooks/useOutSideClick";
 
 const useMenuButton = (onclick: () => void) => {
   const [opened, setOpened] = useState<boolean>(false);

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { setSortBy } from "../redux/getProducts/slice";
 import { getProductSortAction } from "../redux/getProductSort/action";
 import { useAppDispatch } from "../redux/store";
-import useOutSideClick from "./useOutSideClick";
+import useOutSideClick from "../../hooks/useOutSideClick";
 
 const useSort = () => {
   const dispatch = useAppDispatch();

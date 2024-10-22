@@ -1,4 +1,4 @@
-import { Sidebar } from "../interface";
+import { Sidebar } from "../../interface";
 
 export const SidebarData: Sidebar[] = [
   { id: 1, menuText: "Home", menuLink: "/admin/home" },

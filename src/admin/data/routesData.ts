@@ -1,5 +1,5 @@
-import useRouters from "../admin/hooks/useRouters";
-import { Routes } from "../interface";
+import useRouters from "../hooks/useRouters";
+import { Routes } from "../../interface";
 
 const { AdminHomePage, AdminProductsPage, AdminSettinsPage } = useRouters();
 

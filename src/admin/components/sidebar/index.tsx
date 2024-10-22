@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { SidebarData } from "../../../data/sidebar";
+import { SidebarData } from "../../data/sidebar";
 
 const Sidebar: React.FC = () => {
   return (

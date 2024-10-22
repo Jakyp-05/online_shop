@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 import Layout from "../components/layout";
-import { routesData } from "../../data/routesData";
+import { routesData } from "../data/routesData";
 import useRouters from "../hooks/useRouters";
 
 const adminRoutes = (): RouteObject[] => {

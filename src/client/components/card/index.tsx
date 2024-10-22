@@ -1,6 +1,7 @@
 import React from "react";
 import { Product } from "../../../interface";
 import { useNavigate } from "react-router-dom";
+import Button from "../../../ui/button";
 
 type IProps = {
   item: Product;
@@ -25,18 +26,17 @@ const Card: React.FC<IProps> = ({ item, isCatalog }) => {
       <div className="card__content">
         <div className="card__title">
           <h2>{item.title}</h2>
-          <button
-            className="btn btn_view"
-            onClick={() => handleNavigateId(item.id)}
-          >
-            View
-          </button>
+          <Button
+            role="View"
+            bg="btn_view"
+            onclick={() => handleNavigateId(item.id)}
+          />
         </div>
         <span className="card__price">$ {item.price}</span>
         <p className="card__text">{item.description}</p>
         <div className="card__actions">
-          <button className="btn btn_cart">Add To Cart</button>
-          <button className="btn btn_buy">Buy Now</button>
+          <Button role="Add To Cart" bg="btn_cart" />
+          <Button role="Buy Now" bg="btn_buy" />
         </div>
       </div>
     </li>

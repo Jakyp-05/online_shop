@@ -1,4 +1,4 @@
-import Loadle from "../../loadable/Loadle";
+import Loadle from "../../ui/loadable/Loadle";
 
 const useRouters = () => {
   const AdminHomePage = Loadle({
@@ -12,7 +12,7 @@ const useRouters = () => {
   });
 
   const ErrorBoundary = Loadle({
-    factory: () => import("../../errorElement"),
+    factory: () => import("../../ui/errorElement"),
   });
 
   return { AdminHomePage, AdminProductsPage, AdminSettinsPage, ErrorBoundary };

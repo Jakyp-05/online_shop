@@ -1,12 +1,12 @@
 .layout {
+  margin-top: 20px;
   display: flex;
   height: 100%;
-  .layout__header {
+  .layout__content {
     width: 80%;
+    height: 680px;
+    flex: 1;
     padding: 20px;
-    .layout__content {
-      flex: 1;
-      padding: 20px;
-    }
+    background-color: #f4f4f4;
   }
 }

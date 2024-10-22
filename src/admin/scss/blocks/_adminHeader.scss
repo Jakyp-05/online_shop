@@ -3,4 +3,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+  &__first {
+    padding: 0 0 0 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+  .profile {
+    display: flex;
+    padding: 0 20px 0 0;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+    &__image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
 }

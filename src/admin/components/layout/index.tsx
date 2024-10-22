@@ -5,13 +5,11 @@ import Header from "../header";
 const Layout = () => {
   return (
     <div className="admin-container">
+      <Header />
       <section className="layout">
         <Sidebar />
-        <div className="layout__header">
-          <Header />
-          <div className="layout__content">
-            <Outlet />
-          </div>
+        <div className="layout__content">
+          <Outlet />
         </div>
       </section>
     </div>

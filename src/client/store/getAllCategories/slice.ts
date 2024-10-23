@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { categoriesState } from "./type";
 import { getAllCategoriesAction } from "./action";
-import { Categories } from "../../../interface";
+import { Categories } from "../../../api/types/CategoriesTypes";
 
 const initialState: categoriesState = {
   categories: [],

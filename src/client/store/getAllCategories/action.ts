@@ -1,6 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Categories} from "../../../interface";
-import { getAllCategories } from "./api";
+import { Categories } from "../../../api/types/CategoriesTypes";
+import { getAllCategories } from "../../../api/services/getAllCategories";
 
 export const getAllCategoriesAction = createAsyncThunk<Categories[]>(
   "categories",
@@ -13,4 +13,3 @@ export const getAllCategoriesAction = createAsyncThunk<Categories[]>(
     }
   }
 );
-

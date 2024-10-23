@@ -1,6 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Product } from "../../../interface";
-import { getProductSort } from "./api";
+import { Product } from "../../../api/types/productTypes";
+import { getProductSort } from "../../../api/services/productSortService";
+
 
 interface SortParams {
   sortBy: string;

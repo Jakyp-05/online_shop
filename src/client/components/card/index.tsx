@@ -1,7 +1,7 @@
 import React from "react";
-import { Product } from "../../../interface";
 import { useNavigate } from "react-router-dom";
-import Button from "../../../ui/button";
+import { Product } from "../../../api/types/productTypes";
+import Button from "../../../shared/ui/button";
 
 type IProps = {
   item: Product;

@@ -1,10 +1,10 @@
-import Loadle from "../../ui/loadable/Loadle";
+import Loadle from "../../shared/ui/loadable/Loadle";
 
 const useRoutes = () => {
   const Catalog = Loadle({ factory: () => import("../pages/CatalogPage") });
   const NotFound = Loadle({ factory: () => import("../pages/NotFound") });
   const ErrorBoundary = Loadle({
-    factory: () => import("../../ui/errorElement"),
+    factory: () => import("../../shared/ui/errorElement"),
   });
   const ProductId = Loadle({
     factory: () => import("../components/productId"),

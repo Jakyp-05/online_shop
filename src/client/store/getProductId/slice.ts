@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { productIdState } from "./type";
+import { Product } from "../../../api/types/productTypes";
 import { getIdProductAction } from "./action";
-import { Product } from "../../../interface";
+import { productIdState } from "./type";
 
 const initialState: productIdState = {
   product: null,

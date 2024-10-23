@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../redux/store";
-import { getAllCategoriesAction } from "../redux/getAllCategories/action";
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { getAllCategoriesAction } from "../store/getAllCategories/action";
 
 const useCategories = () => {
   const dispatch = useAppDispatch();

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { getProductsCategoryAction } from "../redux/getProductCategory/action";
-import { useAppDispatch } from "../redux/store";
 import { useNavigate, useParams } from "react-router-dom";
-import { getAllProductsAction } from "../redux/getProducts/action";
 import useOutSideClick from "../../hooks/useOutSideClick";
+import { getProductsCategoryAction } from "../store/getProductCategory/action";
+import { useAppDispatch } from "../store/store";
+import { getAllProductsAction } from "../store/getProducts/action";
 
 const useCategoryParoducts = () => {
   const dispatch = useAppDispatch();

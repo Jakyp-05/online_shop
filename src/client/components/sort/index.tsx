@@ -1,7 +1,7 @@
 import React from "react";
 
 import useSort from "../../hooks/useSort";
-import { SortData } from "../../../data/sort";
+import { SortData } from "../../../shared/data/sort";
 
 const Sort: React.FC = () => {
   const { openSort, handleOpenSort, ref, handleSortClick } = useSort();

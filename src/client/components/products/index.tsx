@@ -1,7 +1,8 @@
 import React from "react";
-import Card from "../card";
 import { Link } from "react-router-dom";
+
 import useProduct from "../../hooks/useProduct";
+import Card from "../card";
 import CardSkeleton from "../cardSkeleton";
 
 const Products: React.FC = () => {

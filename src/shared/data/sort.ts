@@ -1,4 +1,4 @@
-import { Sort } from "../interface";
+import { Sort } from "../../api/types/productSortTypes";
 
 export const SortData: Sort[] = [
   { id: 1, text: "A to Z", sortText: "title-asc" },

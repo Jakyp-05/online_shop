@@ -1,7 +1,8 @@
-import { yupResolver } from "@hookform/resolvers/yup";
 import { ChangeEvent, useState } from "react";
-import { IFormInput } from "../../interface";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+
+import { IFormInput } from "../../interface";
 import { schema } from "./yup";
 
 const useLogin = () => {

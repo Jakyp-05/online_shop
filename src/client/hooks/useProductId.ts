@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../redux/store";
-import { getIdProductAction } from "../redux/getProductId/action";
+
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { getIdProductAction } from "../store/getProductId/action";
 
 const useProductId = (isCatalog?: boolean) => {
   const { id } = useParams<{ id: string }>();

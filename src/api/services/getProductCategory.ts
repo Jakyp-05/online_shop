@@ -1,5 +1,5 @@
-import { apiRoot } from "../../../api/api";
-import { Products } from "../../../interface";
+import { apiRoot } from "../../api/config/api";
+import { Products } from "../types/productTypes";
 
 export const getProductsCategory = async (
   category: string

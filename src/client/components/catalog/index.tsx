@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import useProduct from "../../hooks/useProduct";
 import useCategories from "../../hooks/useCategories";
 import useCategoryParoducts from "../../hooks/useCategoryParoducts";
@@ -8,7 +9,6 @@ import MenuButton from "../../ui/menuButton";
 import CardSkeleton from "../cardSkeleton";
 import Card from "../card";
 import CategoriesCom from "../categories";
-
 import Sort from "../sort";
 
 const Catalog: React.FC = () => {

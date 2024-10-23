@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../redux/store";
-import { getAllProductsAction } from "../redux/getProducts/action";
-import { getProductSortAction } from "../redux/getProductSort/action";
+
+import { useAppDispatch, useAppSelector } from "../store/store";
+import { getAllProductsAction } from "../store/getProducts/action";
+import { getProductSortAction } from "../store/getProductSort/action";
 
 const useProduct = () => {
   const dispatch = useAppDispatch();

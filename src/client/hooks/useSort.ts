@@ -4,7 +4,8 @@ import useOutSideClick from "../../hooks/useOutSideClick";
 
 import { setSortBy } from "../store/getProducts/slice";
 import { getProductSortAction } from "../store/getProductSort/action";
-import { useAppDispatch } from "../store/store";
+import { useAppDispatch } from "../../store";
+
 
 const useSort = () => {
   const dispatch = useAppDispatch();

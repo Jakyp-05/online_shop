@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../store/store";
 import { getAllCategoriesAction } from "../store/getAllCategories/action";
+import { useAppDispatch, useAppSelector } from "../../store";
 
 const useCategories = () => {
   const dispatch = useAppDispatch();
   const { categories, status, error } = useAppSelector(
-    (state) => state.categories
+    (state) => state.client.categories
   );
   useEffect(() => {
     dispatch(getAllCategoriesAction());

@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 
 import App from "./App.tsx";
 
-import { store } from "./client/store/store.ts";
+import { store } from "./store.ts";
 
 import "./client/sass/styles.scss";
 import "./admin/scss/styles.scss";

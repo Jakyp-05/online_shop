@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useOutSideClick from "../../hooks/useOutSideClick";
 import { getProductsCategoryAction } from "../store/getProductCategory/action";
-import { useAppDispatch } from "../store/store";
 import { getAllProductsAction } from "../store/getProducts/action";
+import { useAppDispatch } from "../../store";
 
 const useCategoryParoducts = () => {
   const dispatch = useAppDispatch();

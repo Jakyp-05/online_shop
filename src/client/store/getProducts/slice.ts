@@ -74,7 +74,7 @@ const productSlice = createSlice({
       )
       .addCase(getProductSortAction.rejected, (state, action) => {
         state.status = "failed";
-        state.error = action.error.message || "Failed to sort products";
+        state.error = action.error.message || "An unknown error occurred";
       });
   },
 });

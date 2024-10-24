@@ -10,6 +10,8 @@ import CardSkeleton from "../cardSkeleton";
 import Card from "../card";
 import CategoriesCom from "../categories";
 import Sort from "../sort";
+import { Categories } from "../../../api/types/CategoriesTypes";
+import { Product } from "../../../api/types/productTypes";
 
 const Catalog: React.FC = () => {
   const { products, status, error } = useProduct();
@@ -44,7 +46,7 @@ const Catalog: React.FC = () => {
                     All
                   </Link>
                 </li>
-                {categories.map((category, index) => (
+                {categories.map((category: Categories, index: number) => (
                   <CategoriesCom
                     key={index}
                     category={category}
@@ -67,7 +69,7 @@ const Catalog: React.FC = () => {
                 All
               </Link>
             </li>
-            {categories.map((category, index) => (
+            {categories.map((category: Categories, index: number) => (
               <CategoriesCom
                 key={index}
                 category={category}
@@ -81,7 +83,7 @@ const Catalog: React.FC = () => {
             {products.length === 0 && status === "succeeded" && (
               <div>Товары не найдены</div>
             )}
-            {products.map((item) => (
+            {products.map((item: Product) => (
               <Card key={item.id} item={item} isCatalog={true} />
             ))}
           </ul>

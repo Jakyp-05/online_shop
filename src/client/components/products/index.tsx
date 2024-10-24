@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import useProduct from "../../hooks/useProduct";
 import Card from "../card";
 import CardSkeleton from "../cardSkeleton";
+import { Product } from "../../../api/types/productTypes";
 
 const Products: React.FC = () => {
   const { products, status, error } = useProduct();
@@ -15,7 +16,7 @@ const Products: React.FC = () => {
         <h2>Our Products</h2>
         <ul className="card__list">
           {status === "loading" && <CardSkeleton props={6} />}
-          {products.slice(0, 6).map((item) => (
+          {products.slice(0, 6).map((item: Product) => (
             <Card key={item.id} item={item} />
           ))}
         </ul>

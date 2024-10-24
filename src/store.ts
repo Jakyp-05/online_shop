@@ -1,8 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
+import { rootReducerClient } from "./client/store/reducer";
+
+const rootReducer = combineReducers({
+  client: rootReducerClient,
+});
 
 export const store = configureStore({
-  reducer: {},
+  reducer: rootReducer,
 });
 
 export type RootState = ReturnType<typeof store.getState>;

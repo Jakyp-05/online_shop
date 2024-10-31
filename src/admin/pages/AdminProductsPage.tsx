@@ -1,7 +1,8 @@
 import React from "react";
+import ProductPage from "../components/productPage";
 
 const AdminProductsPage: React.FC = () => {
-  return <div>Admin products page</div>;
+  return <ProductPage />;
 };
 
 export default AdminProductsPage;

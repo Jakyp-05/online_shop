@@ -6,7 +6,6 @@ const Header: React.FC = () => {
     <header className="admin-header">
       <div className="admin-header__first">
         <Link to={"/admin/home"}>Logo</Link>
-        <div className="callback-form">Search</div>
       </div>
       <div className="profile">
         <img

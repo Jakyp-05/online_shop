@@ -1,0 +1,36 @@
+.sortBy {
+  padding: 5px 10px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  &__top {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    .sortBy__title {
+      font-size: 16px;
+      font-weight: 400;
+      span {
+        font-weight: 600;
+        margin-left: 5px;
+      }
+    }
+  }
+  &__content {
+    position: absolute;
+    background-color: #f4f4f4;
+    padding: 5px;
+    width: 145px;
+    height: 120px;
+    top: 105px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    text-align: center;
+    list-style-type: none;
+    li {
+      margin: 10px 0px;
+    }
+  }
+}

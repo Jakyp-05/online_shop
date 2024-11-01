@@ -1,0 +1,207 @@
+  .container{                                                                                            
+    display: flex;
+    gap: 75px;
+  }
+  
+  .box1{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .box2{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+  
+  
+    button{
+      background-color: #ccc;
+      padding: 5px;
+      font-size: 20px;
+      width: 15px;
+      border-radius: 5px;
+    }
+
+    p{
+      margin-top: 10px;
+    }
+  }
+  
+  .number{
+    margin-top: 5px;
+    font-size: 20px;
+  }
+  
+  .box3{
+    font-size: 22px;
+  }
+  
+  
+  
+  .box-left{
+    width: 750px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 4px ; 
+  
+    h3{
+      font-size: 25px;
+    }
+    
+    p{
+      margin: 5px 0 10px 0;
+      color: #848181;
+    }
+  }
+  
+  .inbox{
+    display: flex;
+    gap: 30px;
+    width: 350px;
+  
+  }
+  
+  .img-product{
+    width: 120px;
+    height: 130px;
+    border-radius: 12px;
+  }
+  
+  .detile{
+    display: grid;
+  
+    img{
+      width: 20px;
+      height: 19px;
+    }
+  
+    h5{
+      font-size: 20px;
+    }
+    
+  }
+  
+  .icons{
+    display: flex;
+    gap: 15px;
+  }
+  
+  
+  
+  .box-right{
+    width: 300px;   
+    padding: 20px;   
+    border-radius: 10px;
+    box-shadow: 1px 4px 7px ;     
+    
+    h6{
+      font-size: 22px;
+      color: #a73afd;;
+    }
+    
+    button{
+      background-color: #a73afd;
+      color: white;
+      width: 300px;
+      height: 45px;
+      border-radius: 12px;
+      margin: 20px 0 10px 0;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    button:hover{
+      box-shadow: 0 1px 3px #a73afd ;
+    }
+  }
+  
+  .info{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 10px 0 ;
+  }
+  
+  .info-2{
+    display: flex;
+    justify-content: space-between;
+  
+    h3{
+    font-size: 25px;
+    }
+  }
+  
+  .info-3{
+    display: flex;
+    gap: 10px;
+  }
+  
+  .optioins{
+    display: grid;
+    gap: 0;
+  }
+  
+  .optioin{
+    margin: 30px 0 0 0 ;
+    padding: 25px 20px;
+    width: 750px;
+    box-shadow: 0 3px 5px;
+    border-radius: 10px;
+  
+    strong{
+      margin: 10px 0;
+      font-size: 20px;
+      color: #a73afd;
+    }
+    p{
+      margin-top: 10px;
+    }
+  }
+
+  .optioin:hover{
+    box-shadow: 0 3px 5px #a73afd;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+  
+  /* Адаптация - Жумшак ылдыйдан өйдө карай (mobile-first) */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .box-left, .box-right {
+      width: 100%;
+      margin-bottom: 20px;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  
+    .optioins {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  
+    .optioin {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Планшет - Орто өлчөмдөгү экрандар үчүн */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .box-left, .box-right {
+      width: 100%;
+    }
+  
+    .optioin h1, .optioin h5 {
+      text-align: center;
+    }
+  }
+  

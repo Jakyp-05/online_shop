@@ -1,10 +1,12 @@
 import React from 'react'
-import  "../../sass/media/_basket.scss"                                                                  
+                                                          
 
 function index() {
   return (
     <>
-    <div className='basket-page container'>
+    <section className='basket-page'>
+
+    <div className='container'>
       
       <div className='box-left'>
 
@@ -71,24 +73,25 @@ function index() {
 
     </div>
 
-    <div className='categoris container'>
+    <div className='optioins container'>
 
-    <div className='sposoby '>
-      <h1>Способ доставки</h1>
-      <h5>выбрать адрес доставки</h5>
+    <div className='optioin '>
+      <strong>Способ доставки</strong>
+      <p>выбрать адрес доставки</p>
     </div>
 
-    <div className='sposoby '>
-      <h1>Способ оплаты</h1>
-      <h5>Войти или зарегистрироваться, чтобы выбрать способ оплаты</h5>
+    <div className='optioin '>
+      <strong>Способ оплаты</strong>
+      <p>Войти или зарегистрироваться, чтобы выбрать способ оплаты</p>
     </div>
 
-    <div className='sposoby '>
-      <h1>Мои данные</h1>
-      <h5>Войти или зарегистрироваться, чтобы оформить заказ</h5>
+    <div className='optioin '>
+      <strong>Мои данные</strong>
+      <p>Войти или зарегистрироваться, чтобы оформить заказ</p>
     </div>
 
-    </div>
+    </div>  
+    </section>
     </>
   )
 }

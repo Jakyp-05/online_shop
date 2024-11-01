@@ -6,7 +6,7 @@ function index() {
     <>
     <section className='basket-page'>
 
-    <div className='container'>
+    <div className='container-1 container'>
       
       <div className='box-left'>
 

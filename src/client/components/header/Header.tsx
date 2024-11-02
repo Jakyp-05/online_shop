@@ -20,7 +20,7 @@ const Header: React.FC = () => {
         </div>
         <div className="header__actions">
           <div className="header__cart">
-            <Link to="/cart">My Cart: (1)</Link>
+            <Link to="/basket">My Cart: (1)</Link>
           </div>
           <div className="header__login">
             <Link to="/login">Login</Link>

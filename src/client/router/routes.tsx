@@ -1,13 +1,13 @@
 import { RouteObject } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import useRoute from "../hooks/useRoute";
-import BasketPage from "../pages/BasketPage";
 
 // Route
 import HomePage from "../pages/HomePage";
 
 const clientRoutes = (): RouteObject[] => {
-  const { Catalog, NotFound, ErrorBoundary, ProductId, LoginPage } = useRoute();
+  const { Catalog, NotFound, ErrorBoundary, ProductId, LoginPage, BasketPage } =
+    useRoute();
 
   return [
     {
@@ -45,8 +45,8 @@ const clientRoutes = (): RouteObject[] => {
         },
         {
           path: "/basket",
-          element: <BasketPage />
-        }
+          element: BasketPage,
+        },
       ],
     },
   ];

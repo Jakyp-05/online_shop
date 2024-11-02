@@ -1,6 +1,7 @@
 import { RouteObject } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import useRoute from "../hooks/useRoute";
+import BasketPage from "../pages/BasketPage";
 
 // Route
 import HomePage from "../pages/HomePage";
@@ -42,6 +43,10 @@ const clientRoutes = (): RouteObject[] => {
           path: "*",
           element: NotFound,
         },
+        {
+          path: "/basket",
+          element: <BasketPage />
+        }
       ],
     },
   ];

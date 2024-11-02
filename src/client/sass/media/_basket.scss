@@ -1,0 +1,41 @@
+  /* Адаптация - Жумшак ылдыйдан өйдө карай (mobile-first) */
+  @media (max-width: 768px) {
+    .basket-page{
+        margin: 0 auto;
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    
+  
+    .box-left, .box-right {
+      width: 100%;
+      margin-bottom: 20px;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+  
+    .optioins {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  
+    .optioin {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Планшет - Орто өлчөмдөгү экрандар үчүн */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .box-left, .box-right {
+      width: 100%;
+    }
+  
+    .optioin h1, .optioin h5 {
+      text-align: center;
+    }
+  }
+  

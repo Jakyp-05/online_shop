@@ -6,7 +6,7 @@ const Basket:React.FC = () => {
     <>
     <section className='basket-page'>
 
-    <div className='container-1 container'>
+    <div className='basket-container container'>
       
       <div className='box-left'>
 
@@ -47,38 +47,10 @@ const Basket:React.FC = () => {
         
       </div>
 
-      <div className='box-right'>
-
-        <h6>select delivery address</h6>
-
-        <div className='info'>
-          <p>Товары 1шт.</p>
-          <p>1000$</p>
-        </div>
-
-        <div className='info-2'>
-          <h3>Total</h3>
-          <h3>1000$</h3>
-        </div>
-
-        <button>Order</button>
-
-        <div className='info-3'>
-          <input type="checkbox" />
-        <p>I agree with the rules for using the trading platform and returning</p>             
-        </div>
-
-
-      </div>
 
     </div>
 
     <div className='optioins container'>
-
-    <div className='optioin '>
-      <strong>Способ доставки</strong>
-      <p>выбрать адрес доставки</p>
-    </div>
 
     <div className='optioin '>
       <strong>Способ оплаты</strong>

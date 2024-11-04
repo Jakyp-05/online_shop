@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { getIdProductAction } from "../store/getProductId/action";
-import { useAppDispatch, useAppSelector } from "../../store";
+import { useAppDispatch, useAppSelector } from "../../store/store";
 
 const useProductId = (isCatalog?: boolean) => {
   const { id } = useParams<{ id: string }>();

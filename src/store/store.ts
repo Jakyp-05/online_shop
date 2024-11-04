@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { rootReducerClient } from "./client/store/reducer";
+import { rootReducerClient } from "../client/store/reducer";
 
 const rootReducer = combineReducers({
   client: rootReducerClient,

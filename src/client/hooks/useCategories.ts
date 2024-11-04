@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { getAllCategoriesAction } from "../store/getAllCategories/action";
-import { useAppDispatch, useAppSelector } from "../../store";
+import { useAppDispatch, useAppSelector } from "../../store/store";
 
 const useCategories = () => {
   const dispatch = useAppDispatch();

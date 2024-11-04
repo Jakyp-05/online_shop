@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { getAllProductsAction } from "../store/getProducts/action";
 import { getProductSortAction } from "../store/getProductSort/action";
-import { useAppDispatch, useAppSelector } from "../../store";
+import { useAppDispatch, useAppSelector } from "../../store/store";
 
 const useProduct = () => {
   const dispatch = useAppDispatch();

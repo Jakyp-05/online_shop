@@ -6,8 +6,15 @@ import useRoute from "../hooks/useRoute";
 import HomePage from "../pages/HomePage";
 
 const clientRoutes = (): RouteObject[] => {
-  const { Catalog, NotFound, ErrorBoundary, ProductId, LoginPage, BasketPage } =
-    useRoute();
+  const {
+    Catalog,
+    NotFound,
+    ErrorBoundary,
+    ProductId,
+    LoginPage,
+    BasketPage,
+    RegisterPage,
+  } = useRoute();
 
   return [
     {
@@ -46,6 +53,10 @@ const clientRoutes = (): RouteObject[] => {
         {
           path: "/basket",
           element: BasketPage,
+        },
+        {
+          path: "/register",
+          element: RegisterPage,
         },
       ],
     },

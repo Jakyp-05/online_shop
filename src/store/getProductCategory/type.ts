@@ -1,4 +1,4 @@
-import { Products } from "../../../api/types/productTypes";
+import { Products } from "../../api/types/productTypes";
 
 export interface categoryState {
   products: Products;

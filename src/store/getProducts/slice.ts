@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { Product, Products } from "../../../api/types/productTypes";
+import { Product, Products } from "../../api/types/productTypes";
 import { getProductsCategoryAction } from "../getProductCategory/action";
 import { getProductSortAction } from "../getProductSort/action";
 import { getAllProductsAction } from "./action";

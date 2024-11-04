@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Product } from "../../../api/types/productTypes";
+import { Product } from "../../api/types/productTypes";
 import { getIdProductAction } from "./action";
 import { productIdState } from "./type";
 

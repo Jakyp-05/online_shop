@@ -11,6 +11,10 @@
   .box1{
     display: flex;
     justify-content: space-between;
+
+    .price{
+      font-size: 22px;
+    }
     
   }
   
@@ -28,8 +32,9 @@
       border-radius: 5px;
     }
 
-    p{
-      margin-top: 10px;
+    span{
+      margin-top: 5px;
+      font-size: 22px;
     }
   }
   
@@ -130,10 +135,16 @@
   .info-2{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
   
     h3{
     font-size: 25px;
-    margin-top: 10px;
+    }
+
+    span{
+      font-size: 24px;
+      font-weight: 600;
     }
   }
   

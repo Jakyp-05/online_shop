@@ -11,7 +11,6 @@ const ProductId: React.FC = () => {
   const imageUrl = hasImages
     ? product.images[0]
     : "/path/to/placeholder-image.jpg";
-  console.log(product);
 
   if (error) return <span>Error:{error}</span>;
 

@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.register {
+  .register__content {
+    width: 350px;
+    height: 100%;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    padding: 20px 40px 20px 30px;
+    margin: 0 auto;
+
+    .error {
+      color: red;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .register__text {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        height: 40px;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "inter";
+        cursor: pointer;
+      }
+
+      h2 {
+        color: #143dea;
+        font-size: 30px;
+        font-weight: 600;
+        font-family: "inter";
+      }
+
+      p {
+        width: 370px;
+        color: #000;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "inter";
+      }
+    }
+
+    .register__inputs {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .inputs__label {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        label {
+          color: #000;
+          font-size: 15px;
+          font-weight: 500;
+          font-family: "inter";
+        }
+
+        input {
+          width: 100%;
+          height: 40px;
+          border-radius: 8px;
+          outline: none;
+          border: 1px solid black;
+
+          color: #8692a6;
+          font-size: 18px;
+          font-weight: 400;
+          font-family: "inter";
+          opacity: 0.8;
+          letter-spacing: 0.5px;
+          padding-left: 10px;
+        }
+      }
+
+      .inputs__checkbox {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        input {
+          width: 18px;
+          height: 18px;
+          background: #8692a6;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+
+        p {
+          color: #000;
+          font-size: 16px;
+          font-weight: 500;
+          font-family: "inter";
+        }
+      }
+    }
+
+    .register__btn {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      button {
+        width: 100%;
+        height: 40px;
+        border-radius: 8px;
+        background: #143dea;
+
+        color: #fff;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: "inter";
+        cursor: pointer;
+      }
+
+      p {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: "inter";
+        text-align: center;
+
+        span {
+          color: #143dea;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}

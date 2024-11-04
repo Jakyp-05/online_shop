@@ -10,8 +10,19 @@ const useRoutes = () => {
     factory: () => import("../components/productId"),
   });
   const LoginPage = Loadle({ factory: () => import("../pages/LoginPage") });
+  const RegisterPage = Loadle({
+    factory: () => import("../pages/RegisterPage"),
+  });
   const BasketPage = Loadle({ factory: () => import("../pages/BasketPage") });
-  return { Catalog, NotFound, ErrorBoundary, ProductId, LoginPage, BasketPage };
+  return {
+    Catalog,
+    NotFound,
+    ErrorBoundary,
+    ProductId,
+    LoginPage,
+    BasketPage,
+    RegisterPage,
+  };
 };
 
 export default useRoutes;

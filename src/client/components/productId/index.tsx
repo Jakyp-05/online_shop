@@ -1,7 +1,7 @@
 import React from "react";
 
 import Button from "../../../shared/ui/button";
-import useProductId from "../../hooks/useProductId";
+import useProductId from "../../../hooks/useProductId";
 
 const ProductId: React.FC = () => {
   const isCatalog = location.pathname.includes("/catalog");

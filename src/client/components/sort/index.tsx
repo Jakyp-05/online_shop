@@ -1,6 +1,6 @@
 import React from "react";
 
-import useSort from "../../hooks/useSort";
+import useSort from "../../../hooks/useSort";
 import { SortData } from "../../../shared/data/sort";
 
 const Sort: React.FC = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import useProduct from "../../hooks/useProduct";
+import useProduct from "../../../hooks/useProduct";
 import Card from "../card";
 import CardSkeleton from "../cardSkeleton";
 import { Product } from "../../../api/types/productTypes";

@@ -1,9 +1,14 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { rootReducerClient } from "../client/store/reducer";
+
+import categoriesSlice from "./getAllCategories/slice";
+import productSlice from "./getProducts/slice";
+import productIdSlice from "./getProductId/slice";
 
 const rootReducer = combineReducers({
-  client: rootReducerClient,
+  products: productSlice,
+  categories: categoriesSlice,
+  productId: productIdSlice,
 });
 
 export const store = configureStore({

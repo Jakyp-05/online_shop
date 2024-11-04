@@ -47,6 +47,24 @@ const Basket:React.FC = () => {
         
       </div>
 
+          <div className='box-right'>
+
+        <h6>select delivery address</h6>
+
+        <div className='info'>
+          <p>Товары 1шт.</p>
+          <p>1000$</p>
+        </div>
+
+        <div className='info-2'>
+          <h3>Total</h3>
+          <h3>1000$</h3>
+        </div>
+
+        <button>Order</button>
+
+      </div>
+
 
     </div>
 

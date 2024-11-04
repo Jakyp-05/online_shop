@@ -2,6 +2,11 @@
   margin: 70px auto 0;                                                                                  
 
   }
+
+  .basket-container{
+    display: flex;
+    gap: 50px;
+  }
   
   .box1{
     display: flex;
@@ -106,7 +111,7 @@
       width: 300px;
       height: 45px;
       border-radius: 12px;
-      margin: 20px 0 10px 0;
+      margin: 20px 0 0 0;
       font-size: 20px;
       cursor: pointer;
     }
@@ -128,6 +133,7 @@
   
     h3{
     font-size: 25px;
+    margin-top: 10px;
     }
   }
   

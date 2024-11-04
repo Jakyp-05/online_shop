@@ -2,8 +2,15 @@ import React from "react";
 import Button from "../../../shared/ui/button";
 import CategoryProducts from "../category";
 import SortByProducts from "../sortBy";
+import useProduct from "../../../hooks/useProduct";
 
 const ProductPage: React.FC = () => {
+  const { products, status, error } = useProduct();
+
+  if (error) return <div>Error: {error}</div>;
+
+  if (status === "loading") return <div>Loading...</div>;
+
   return (
     <section className="product-page">
       <div className="product__top">
@@ -18,54 +25,40 @@ const ProductPage: React.FC = () => {
             <tr>
               <th>Product name</th>
               <th>Purchase Unit Price</th>
-              <th>Products</th>
               <th>Rating</th>
               <th>Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className="product__table_content">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRgS5Eq1ohKHqo0j3t9jdHJUho1v1-GkrjDA&s"
-                  alt="product image"
-                />
-                <div className="product__table_content_table_title">
-                  <h4>Gabriela Cashmere Blazer</h4>
-                  <p>
-                    SKU: <span>T14116</span>
-                  </p>
-                </div>
-              </td>
-              <td>100 $</td>
-              <td>20</td>
-              <td>4.9</td>
-              <td>
-                <Button role="Edit" bg="btn_edit" />
-                <Button role="Edit" bg="btn_delete" />
-              </td>
-            </tr>
-            <tr>
-              <td className="product__table_content">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRgS5Eq1ohKHqo0j3t9jdHJUho1v1-GkrjDA&s"
-                  alt="product image"
-                />
-                <div className="product__table_content_table_title">
-                  <h4>Gabriela Cashmere Blazer</h4>
-                  <p>
-                    SKU: <span>T14116</span>
-                  </p>
-                </div>
-              </td>
-              <td>100 $</td>
-              <td>20</td>
-              <td>4.9</td>
-              <td>
-                <Button role="Edit" bg="btn_edit" />
-                <Button role="Edit" bg="btn_delete" />
-              </td>
-            </tr>
+            {products.slice(0, 5).map((el) => (
+              <tr>
+                <td className="product__table_content">
+                  <img src={el.thumbnail} alt={el.title} />
+                  <div className="product__table_content_table_title">
+                    <h4>{el.title}</h4>
+                    <p>
+                      SKU: <span>{el.sku}</span>
+                    </p>
+                  </div>
+                </td>
+                <td>{el.price} $</td>
+                <td>
+                  <span
+                    className={
+                      el?.rating !== undefined && el.rating < 4
+                        ? "rating-minus"
+                        : "rating-plus"
+                    }
+                  >
+                    {el.rating ?? 0}
+                  </span>
+                </td>
+                <td>
+                  <Button role="Edit" bg="btn_edit" />
+                  <Button role="Edit" bg="btn_delete" />
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

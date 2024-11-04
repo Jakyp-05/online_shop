@@ -36,11 +36,11 @@ const Basket:React.FC = () => {
         <div className='box2'>
 
           <button>-</button>
-          <div className='number'>1</div>
+          <span>1</span>
           <button>+</button>
         </div>
 
-        <div className='box3'>1000$</div>
+        <span className='price'>1000$</span>
 
         </div>
 
@@ -53,13 +53,13 @@ const Basket:React.FC = () => {
 
         <div className='info'>
           <p>Товары 1шт.</p>
-          <p>1000$</p>
-        </div>
+          <span>1000$</span>
+          </div>
 
         <div className='info-2'>
           <h3>Total</h3>
-          <h3>1000$</h3>
-        </div>
+          <span>1000$</span>
+          </div>
 
         <button>Order</button>
 

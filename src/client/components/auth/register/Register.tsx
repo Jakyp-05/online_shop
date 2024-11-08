@@ -1,5 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import useRegister from "../../../hooks/useRegister";
+import { GoArrowLeft } from "react-icons/go";
 
 const Register: React.FC = () => {
   const navigate = useNavigate();
@@ -11,7 +12,10 @@ const Register: React.FC = () => {
       <div className="container">
         <form className="register__content" onSubmit={handleSubmit(onclick)}>
           <div className="register__text">
-            <span onClick={() => navigate(-1)}>Назад</span>
+            <span onClick={() => navigate(-1)}>
+              <GoArrowLeft />
+              Назад
+            </span>
             <h2>Создайте свой аккаунт!</h2>
             <p>Ваши данные необходимы для целей отраслевого регулирования.</p>
           </div>

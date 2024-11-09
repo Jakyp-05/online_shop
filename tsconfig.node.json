@@ -4,19 +4,34 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "composite": true,
+    "jsx": "react-jsx",
 
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "emitDeclarationOnly": true,
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+     /* Aliases */
+     "baseUrl": ".",
+     "paths": {
+       "@/*": ["src/*"],
+       "@admin/*": ["src/admin/*"],
+       "@api/*": ["src/api/*"],
+       "@client/*": ["src/client/*"],
+       "@hooks/*": ["src/hooks/*"],
+       "@interface/*": ["src/interface/*"],
+       "@shared/*": ["src/shared/*"],
+       "@store/*": ["src/store/*"]
+     }
   },
-  "include": ["vite.config.ts"]
+  "include": ["vite.config.ts", "src/**/*"]
 }

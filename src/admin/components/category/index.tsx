@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useOutSideClick from "../../../hooks/useOutSideClick";
+import useOutSideClick from "@hooks/useOutSideClick";
 
 const CategoryProducts: React.FC = () => {
   const [openCategory, setOpenCategory] = useState<boolean>(false);

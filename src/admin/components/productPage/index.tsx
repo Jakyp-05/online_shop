@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../../../shared/ui/button";
-import CategoryProducts from "../category";
+import Button from "@shared/ui/button";
+import useProduct from "@hooks/useProduct";
 import SortByProducts from "../sortBy";
-import useProduct from "../../../hooks/useProduct";
+import CategoryProducts from "../category";
 
 const ProductPage: React.FC = () => {
   const { products, status, error } = useProduct();

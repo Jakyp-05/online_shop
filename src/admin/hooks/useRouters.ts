@@ -1,4 +1,4 @@
-import Loadle from "../../shared/ui/loadable/Loadle";
+import Loadle from "@shared/ui/loadable/Loadle";
 
 const useRouters = () => {
   const AdminHomePage = Loadle({

@@ -1,0 +1,19 @@
+@media (max-width: 426px) {
+  .register {
+    .register__content {
+      width: 300px;
+
+      p {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .register {
+    .register__content {
+      width: 280px;
+    }
+  }
+}

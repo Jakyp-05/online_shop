@@ -21,8 +21,7 @@ const useLogin = () => {
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    const { name, value } = e.target;
+    const { name, value } = e.target as HTMLInputElement;  // Типти туура көрсөтүү
     setValues({ ...values, [name]: value });
   };
 

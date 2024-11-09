@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import { SortData } from "../../../shared/data/sort";
-import useOutSideClick from "../../../hooks/useOutSideClick";
+import { SortData } from "@shared/data/sort";
+import useOutSideClick from "@hooks/useOutSideClick";
 
 const SortByProducts: React.FC = () => {
   const [openSort, setOpenSort] = useState<boolean>(false);

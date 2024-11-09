@@ -1,5 +1,22 @@
 {
-  "files": [],
+  // "files": [],
+  "compilerOptions": {
+    // ...rest of the template
+    "jsx": "react-jsx",
+    "lib": ["dom", "esnext"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@admin/*": ["src/admin/*"],
+      "@api/*": ["src/api/*"],
+      "@client/*": ["src/client/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@interface/*": ["src/interface/*"],
+      "@shared/*": ["src/shared/*"],
+      "@store/*": ["src/store/*"]
+    }
+  },
+  "include": ["src/**/*"],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

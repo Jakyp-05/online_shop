@@ -15,7 +15,12 @@ const useRouters = () => {
     factory: () => import("../../shared/ui/errorElement"),
   });
 
-  return { AdminHomePage, AdminProductsPage, AdminSettinsPage, ErrorBoundary };
+  return {
+    AdminHomePage,
+    AdminProductsPage,
+    AdminSettinsPage,
+    ErrorBoundary,
+  };
 };
 
 export default useRouters;

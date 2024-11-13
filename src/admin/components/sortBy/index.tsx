@@ -1,18 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { SortData } from "@shared/data/sort";
-import useOutSideClick from "@hooks/useOutSideClick";
+import useSort from "@/hooks/useSort";
 
 const SortByProducts: React.FC = () => {
-  const [openSort, setOpenSort] = useState<boolean>(false);
-
-  const handleOpenSort = () => {
-    setOpenSort(!openSort);
-  };
-
-  const ref = useOutSideClick<HTMLUListElement>(() => {
-    setOpenSort(false);
-  });
+  const { openSort, handleOpenSort, ref, handleSortClick } = useSort();
 
   return (
     <div className="sortBy">
@@ -33,8 +25,10 @@ const SortByProducts: React.FC = () => {
       </div>
       {openSort && (
         <ul ref={ref} className="sortBy__content">
-          {SortData.map((text) => (
-            <li key={text.id}>{text.text}</li>
+          {SortData.map((sort) => (
+            <li key={sort.id} onClick={() => handleSortClick(sort.sortText)}>
+              {sort.text}
+            </li>
           ))}
         </ul>
       )}

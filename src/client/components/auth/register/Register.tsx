@@ -1,11 +1,23 @@
 import { Link, useNavigate } from "react-router-dom";
 import useRegister from "../../../hooks/useRegister";
 import { GoArrowLeft } from "react-icons/go";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 const Register: React.FC = () => {
+  const [show, setShow] = useState(false);
+  const [eyes, setEyes] = useState(false);
   const navigate = useNavigate();
   const { items, register, handleSubmit, onclick, handleChange, errors } =
     useRegister();
+
+  const handleEyes = () => {
+    setShow(!show);
+  };
+
+  const handleClick = () => {
+    setEyes(!eyes);
+  };
 
   return (
     <div className="register">
@@ -50,13 +62,17 @@ const Register: React.FC = () => {
             <div className="inputs__label">
               <label>Создайте пароль*</label>
               <input
-                type="password"
+                type={show ? "text" : "password"}
                 {...register("password")}
                 onChange={handleChange}
                 value={items.password}
                 name="password"
                 placeholder="Пароль"
               />
+              <p className="inputs__eyes" onClick={handleEyes}>
+                {show ? <FaRegEyeSlash /> : <FaRegEye />}
+              </p>
+
               {errors.password && (
                 <p className="error">{errors.password.message}</p>
               )}
@@ -64,13 +80,17 @@ const Register: React.FC = () => {
             <div className="inputs__label">
               <label>Подтвердите пароль*</label>
               <input
-                type="password"
+                type={eyes ? "text" : "password"}
                 {...register("confirmPassword")}
                 onChange={handleChange}
                 value={items.confirmPassword}
                 name="confirmPassword"
                 placeholder="Пароль"
               />
+              <p className="inputs__eyes" onClick={handleClick}>
+                {eyes ? <FaRegEyeSlash /> : <FaRegEye />}
+              </p>
+
               {errors.confirmPassword && (
                 <p className="error">{errors.confirmPassword.message}</p>
               )}

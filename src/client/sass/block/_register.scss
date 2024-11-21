@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 .register {
   .register__content {
-    width: 350px;
+    width: 500px;
     height: 100%;
     box-shadow: 0 0 10px;
     border-radius: 10px;
@@ -60,6 +64,7 @@
         display: flex;
         flex-direction: column;
         gap: 3px;
+        position: relative;
 
         label {
           color: #000;
@@ -74,6 +79,7 @@
           border-radius: 8px;
           outline: none;
           border: 1px solid black;
+          box-sizing: border-box;
 
           color: #8692a6;
           font-size: 18px;
@@ -82,6 +88,14 @@
           opacity: 0.8;
           letter-spacing: 0.5px;
           padding-left: 10px;
+        }
+
+        .inputs__eyes {
+          font-size: 22px;
+          cursor: pointer;
+          position: absolute;
+          right: 10px;
+          bottom: 3px;
         }
       }
 

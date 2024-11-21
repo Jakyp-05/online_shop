@@ -1,8 +1,8 @@
 import { ChangeEvent, useState } from "react";
 import { useForm } from "react-hook-form";
-import { IFormInput } from "../../interface";
+import { IFormRegister } from "../../interface";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { schema } from "./yup";
+import { schemaRegister } from "./yup";
 
 const useRegister = () => {
   const [items, setItems] = useState({
@@ -17,18 +17,19 @@ const useRegister = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<IFormInput>({
-    resolver: yupResolver(schema),
+  } = useForm<IFormRegister>({
+    resolver: yupResolver(schemaRegister),
   });
 
-  const onclick = (data: IFormInput) => {
+  const onclick = (data: IFormRegister) => {
     console.log(data);
     reset();
     setItems({ username: "", email: "", password: "", confirmPassword: "" });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target as HTMLInputElement;  
+    const target = e.target as HTMLInputElement;
+    const { name, value } = target;
     setItems((prevItems) => ({ ...prevItems, [name]: value }));
   };
 

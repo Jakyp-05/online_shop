@@ -2,8 +2,8 @@ import { ChangeEvent, useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 
-import { IFormInput } from "../../interface";
-import { schema } from "./yup";
+import { IFormLogin } from "../../interface";
+import { schemaLogin } from "./yup";
 
 const useLogin = () => {
   const [values, setValues] = useState({ username: "", password: "" });
@@ -12,17 +12,24 @@ const useLogin = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<IFormInput>({ resolver: yupResolver(schema) });
+  } = useForm<IFormLogin>({ resolver: yupResolver(schemaLogin) });
 
-  const onSubmit = (data: IFormInput) => {
+  const onSubmit = (data: IFormLogin) => {
     console.log(data);
     reset();
     setValues({ username: "", password: "" });
   };
 
+  // const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  //   const target = e.target as InputNames; // Явно указываем, что e.target это HTMLInputElement
+  //   const { name, value } = target;
+  //   setValues((prevValues) => ({ ...prevValues, [name]: value }));
+  // };
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target as HTMLInputElement;  // Типти туура көрсөтүү
-    setValues({ ...values, [name]: value });
+    const target = e.target as HTMLInputElement;
+    const { name, value } = target;
+    setValues((prevValues) => ({ ...prevValues, [name]: value }));
   };
 
   return { values, register, handleSubmit, errors, onSubmit, handleChange };

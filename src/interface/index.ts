@@ -1,10 +1,15 @@
 import { ReactNode } from "react";
 
-export interface IFormInput {
+export interface IFormRegister {
   username: string;
   email: string;
   password: string;
   confirmPassword: string;
+}
+
+export interface IFormLogin {
+  username: string;
+  password: string
 }
 
 export interface Sidebar {

@@ -29,7 +29,7 @@ const useRegister = () => {
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const target = e.target as HTMLInputElement;
-    const { name, value } = target;  
+    const { name, value } = target;
     setItems((prevItems) => ({ ...prevItems, [name]: value }));
   };
 

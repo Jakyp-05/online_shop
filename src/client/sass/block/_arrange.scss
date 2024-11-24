@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.arrange {
+  h1 {
+    color: rgb(3, 20, 18);
+    font-family: "Lora";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 105.9%;
+    text-align: center;
+  }
+
+  .arrange__boxs {
+    margin-top: 30px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    .arrange__content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .arrange__personal {
+        width: 700px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .arrange__a1 {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .arrange__number {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(
+              -36.49deg,
+              rgb(11, 63, 55) -8.758%,
+              rgb(203, 141, 98) 157.053%
+            );
+
+            color: rgb(255, 255, 255);
+            font-family: "inter";
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 96.4%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          h3 {
+            color: rgb(3, 20, 18);
+            font-family: "inter";
+            font-size: 27px;
+            font-weight: 500;
+            line-height: 96.4%;
+          }
+        }
+
+        .arrange__inputs {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+
+          input {
+            width: 327px;
+            height: 50px;
+            border: 1px solid rgba(0, 0, 0, 0.247);
+            border-radius: 5px;
+            color: #000;
+            font-family: "inter";
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 96.4%;
+            padding-left: 8px;
+          }
+        }
+
+        .arrange__radio {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
+          .arrange__deli {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input {
+              width: 17px;
+              height: 17px;
+            }
+
+            h4 {
+              background: linear-gradient(
+                150.16deg,
+                rgb(94, 57, 40),
+                rgb(228, 161, 111)
+              );
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
+              font-family: "inter";
+              font-size: 20px;
+              font-weight: 800;
+              line-height: 96.4%;
+              letter-spacing: 0%;
+              text-align: center;
+            }
+
+            p {
+              color: rgb(3, 20, 18);
+              font-family: "inter";
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 132.4%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

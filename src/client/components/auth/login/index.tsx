@@ -2,8 +2,7 @@ import React from "react";
 import useLogin from "../../../hooks/useLogin";
 
 const Login: React.FC = () => {
-  const { values, register, handleSubmit, errors, onSubmit, handleChange } =
-    useLogin();
+  const { register, handleSubmit, onSubmit, errors } = useLogin();
 
   return (
     <section className="login">
@@ -15,8 +14,6 @@ const Login: React.FC = () => {
             <input
               className={errors.username ? "login__error-input" : ""}
               {...register("username")}
-              value={values.username}
-              onChange={handleChange}
               placeholder="Username"
             />
             {errors.username && (
@@ -28,8 +25,6 @@ const Login: React.FC = () => {
             <input
               className={errors.password ? "login__error-input" : ""}
               {...register("password")}
-              value={values.password}
-              onChange={handleChange}
               placeholder="Password"
             />
             {errors.password && (

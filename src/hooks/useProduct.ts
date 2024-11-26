@@ -10,11 +10,6 @@ const useProduct = () => {
   );
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
     dispatch(getAllProductsAction());
     dispatch(getProductSortAction({ sortBy, order }));
   }, [dispatch, sortBy, order]);

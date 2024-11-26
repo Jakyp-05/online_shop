@@ -1,14 +1,9 @@
-import { ChangeEvent } from "react";
-import { IFormInput } from "../../interface";
+import { SubmitHandler } from "react-hook-form";
+import { IFormLogin } from "@/interface";
 declare const useLogin: () => {
-    values: {
-        username: string;
-        password: string;
-    };
-    register: import("react-hook-form").UseFormRegister<IFormInput>;
-    handleSubmit: import("react-hook-form").UseFormHandleSubmit<IFormInput, undefined>;
-    errors: import("react-hook-form").FieldErrors<IFormInput>;
-    onSubmit: (data: IFormInput) => void;
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
+    register: import("react-hook-form").UseFormRegister<IFormLogin>;
+    handleSubmit: import("react-hook-form").UseFormHandleSubmit<IFormLogin, undefined>;
+    onSubmit: SubmitHandler<IFormLogin>;
+    errors: import("react-hook-form").FieldErrors<IFormLogin>;
 };
 export default useLogin;

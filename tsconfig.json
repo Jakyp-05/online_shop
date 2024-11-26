@@ -3,7 +3,7 @@
   "compilerOptions": {
     // ...rest of the template
     "jsx": "react-jsx",
-    "lib": ["dom", "esnext"],
+    "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],

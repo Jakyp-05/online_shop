@@ -1,16 +1,14 @@
-import { ChangeEvent } from "react";
-import { IFormInput } from "../../interface";
+import { SubmitHandler } from "react-hook-form";
+import { IFormRegister } from "@/interface";
 declare const useRegister: () => {
-    items: {
-        username: string;
-        email: string;
-        password: string;
-        confirmPassword: string;
-    };
-    register: import("react-hook-form").UseFormRegister<IFormInput>;
-    handleSubmit: import("react-hook-form").UseFormHandleSubmit<IFormInput, undefined>;
-    onclick: (data: IFormInput) => void;
-    handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
-    errors: import("react-hook-form").FieldErrors<IFormInput>;
+    register: import("react-hook-form").UseFormRegister<IFormRegister>;
+    handleSubmit: import("react-hook-form").UseFormHandleSubmit<IFormRegister, undefined>;
+    navigate: import("react-router").NavigateFunction;
+    onSubmit: SubmitHandler<IFormRegister>;
+    errors: import("react-hook-form").FieldErrors<IFormRegister>;
+    handleEyes: () => void;
+    handleClick: () => void;
+    show: boolean;
+    eyes: boolean;
 };
 export default useRegister;

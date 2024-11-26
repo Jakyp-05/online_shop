@@ -1,5 +1,5 @@
 import * as yup from "yup";
-export declare const schema: yup.ObjectSchema<{
+export declare const schemaRegister: yup.ObjectSchema<{
     username: string;
     email: string;
     password: string;
@@ -9,4 +9,11 @@ export declare const schema: yup.ObjectSchema<{
     email: undefined;
     password: undefined;
     confirmPassword: undefined;
+}, "">;
+export declare const schemaLogin: yup.ObjectSchema<{
+    username: string;
+    password: string;
+}, yup.AnyObject, {
+    username: undefined;
+    password: undefined;
 }, "">;

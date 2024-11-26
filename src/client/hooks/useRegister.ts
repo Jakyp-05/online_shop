@@ -1,39 +1,44 @@
-import { ChangeEvent, useState } from "react";
-import { useForm } from "react-hook-form";
-import { IFormRegister } from "../../interface";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { schemaRegister } from "./yup";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { IFormRegister } from "@/interface";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const useRegister = () => {
-  const [items, setItems] = useState({
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-  });
-
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<IFormRegister>({
-    resolver: yupResolver(schemaRegister),
-  });
+  } = useForm<IFormRegister>({ resolver: yupResolver(schemaRegister) });
+  const [show, setShow] = useState(false);
+  const [eyes, setEyes] = useState(false);
+  const navigate = useNavigate();
 
-  const onclick = (data: IFormRegister) => {
+  const handleEyes = () => {
+    setShow(!show);
+  };
+
+  const handleClick = () => {
+    setEyes(!eyes);
+  };
+
+  const onSubmit: SubmitHandler<IFormRegister> = (data) => {
     console.log(data);
     reset();
-    setItems({ username: "", email: "", password: "", confirmPassword: "" });
   };
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const target = e.target as HTMLInputElement;
-    const { name, value } = target;
-    setItems((prevItems) => ({ ...prevItems, [name]: value }));
+  return {
+    register,
+    handleSubmit,
+    navigate,
+    onSubmit,
+    errors,
+    handleEyes,
+    handleClick,
+    show,
+    eyes,
   };
-
-  return { items, register, handleSubmit, onclick, handleChange, errors };
 };
 
 export default useRegister;

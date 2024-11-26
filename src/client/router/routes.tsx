@@ -4,7 +4,6 @@ import useRoute from "../hooks/useRoute";
 
 // Route
 import HomePage from "../pages/HomePage";
-import Arrange from "../components/arrange";
 
 const clientRoutes = (): RouteObject[] => {
   const {
@@ -15,6 +14,7 @@ const clientRoutes = (): RouteObject[] => {
     LoginPage,
     BasketPage,
     RegisterPage,
+    ArrangePage,
   } = useRoute();
 
   return [
@@ -61,7 +61,7 @@ const clientRoutes = (): RouteObject[] => {
         },
         {
           path: "/arrange",
-          element: <Arrange />,
+          element: ArrangePage,
         },
       ],
     },

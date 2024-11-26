@@ -14,6 +14,9 @@ const useRoutes = () => {
     factory: () => import("../pages/RegisterPage"),
   });
   const BasketPage = Loadle({ factory: () => import("../pages/BasketPage") });
+  const ArrangePage = Loadle({
+    factory: () => import("../pages/Arrange"),
+  });
   return {
     Catalog,
     NotFound,
@@ -22,6 +25,7 @@ const useRoutes = () => {
     LoginPage,
     BasketPage,
     RegisterPage,
+    ArrangePage,
   };
 };
 

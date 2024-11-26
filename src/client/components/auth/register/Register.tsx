@@ -1,28 +1,25 @@
-import { Link, useNavigate } from "react-router-dom";
-import useRegister from "../../../hooks/useRegister";
+import { Link } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import { useState } from "react";
+import useRegister from "@/client/hooks/useRegister";
 
 const Register: React.FC = () => {
-  const [show, setShow] = useState(false);
-  const [eyes, setEyes] = useState(false);
-  const navigate = useNavigate();
-  const { items, register, handleSubmit, onclick, handleChange, errors } =
-    useRegister();
-
-  const handleEyes = () => {
-    setShow(!show);
-  };
-
-  const handleClick = () => {
-    setEyes(!eyes);
-  };
+  const {
+    register,
+    handleSubmit,
+    navigate,
+    onSubmit,
+    errors,
+    handleEyes,
+    handleClick,
+    show,
+    eyes,
+  } = useRegister();
 
   return (
     <div className="register">
       <div className="container">
-        <form className="register__content" onSubmit={handleSubmit(onclick)}>
+        <form className="register__content" onSubmit={handleSubmit(onSubmit)}>
           <div className="register__text">
             <span onClick={() => navigate(-1)}>
               <GoArrowLeft />
@@ -38,8 +35,6 @@ const Register: React.FC = () => {
               <input
                 type="text"
                 {...register("username")}
-                onChange={handleChange}
-                value={items.username}
                 name="username"
                 placeholder="ФИО"
               />
@@ -52,8 +47,6 @@ const Register: React.FC = () => {
               <input
                 type="text"
                 {...register("email")}
-                onChange={handleChange}
-                value={items.email}
                 name="email"
                 placeholder="Email"
               />
@@ -64,8 +57,6 @@ const Register: React.FC = () => {
               <input
                 type={show ? "text" : "password"}
                 {...register("password")}
-                onChange={handleChange}
-                value={items.password}
                 name="password"
                 placeholder="Пароль"
               />
@@ -82,8 +73,6 @@ const Register: React.FC = () => {
               <input
                 type={eyes ? "text" : "password"}
                 {...register("confirmPassword")}
-                onChange={handleChange}
-                value={items.confirmPassword}
                 name="confirmPassword"
                 placeholder="Пароль"
               />

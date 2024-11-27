@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "@shared/ui/button";
-import useProduct from "@hooks/useProduct";
+import Button from "../../../shared/ui/button";
+import useProduct from "../../../hooks/useProduct";
 import SortByProducts from "../sortBy";
 import CategoryProducts from "../category";
 

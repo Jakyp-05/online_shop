@@ -1,5 +1,5 @@
 import React from "react";
-import useAdminCategory from "@/admin/hooks/useAdminCategory";
+import useAdminCategory from "../../hooks/useAdminCategory";
 
 const CategoryProducts: React.FC = () => {
   const {
@@ -32,7 +32,7 @@ const CategoryProducts: React.FC = () => {
       {openCategory && (
         <ul ref={ref} className="category__content">
           <li onClick={() => resetCategoryFilter()}>All products</li>
-          {categories.map((cat, index) => (
+          {categories.map((cat: any, index: any) => (
             <li key={index} onClick={() => handleCategorySelect(cat.name)}>
               {cat.name}
             </li>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { schemaRegister } from "./yup";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { IFormRegister } from "@/interface";
+import { IFormRegister } from "../../interface";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 const useRegister = () => {

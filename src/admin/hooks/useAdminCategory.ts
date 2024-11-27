@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import useCategories from "@/hooks/useCategories";
-import useOutSideClick from "@/hooks/useOutSideClick";
-import { getProductsCategoryAction } from "@/store/getProductCategory/action";
-import { getAllProductsAction } from "@/store/getProducts/action";
-import { useAppDispatch } from "@/store/store";
+import useCategories from "../../hooks/useCategories";
+import useOutSideClick from "../../hooks/useOutSideClick";
+import { getProductsCategoryAction } from "../../store/getProductCategory/action";
+import { getAllProductsAction } from "../../store/getProducts/action";
+import { useAppDispatch } from "../../store/store";
 
 const useAdminCategory = () => {
   const dispatch = useAppDispatch();

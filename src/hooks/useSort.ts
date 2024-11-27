@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import useOutSideClick from "@hooks/useOutSideClick";
-import { setSortBy } from "@store/getProducts/slice";
-import { getProductSortAction } from "@store/getProductSort/action";
-import { useAppDispatch } from "@store/store";
+import useOutSideClick from "../hooks/useOutSideClick";
+import { setSortBy } from "../store/getProducts/slice";
+import { getProductSortAction } from "../store/getProductSort/action";
+import { useAppDispatch } from "../store/store";
 
 const useSort = () => {
   const dispatch = useAppDispatch();

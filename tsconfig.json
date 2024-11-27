@@ -1,10 +1,15 @@
 {
-  // "files": [],
   "compilerOptions": {
-    // ...rest of the template
+    "target": "ESNext",
+    "module": "ESNext",
     "jsx": "react-jsx",
-    "lib": ["DOM", "ESNext"],
-    "baseUrl": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
     "paths": {
       "@/*": ["src/*"],
       "@admin/*": ["src/admin/*"],
@@ -14,11 +19,9 @@
       "@interface/*": ["src/interface/*"],
       "@shared/*": ["src/shared/*"],
       "@store/*": ["src/store/*"]
-    }
+    },
+    "noEmit": true
   },
   "include": ["src/**/*"],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "exclude": ["mode_modules", "dist"]
 }

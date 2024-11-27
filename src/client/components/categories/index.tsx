@@ -1,5 +1,5 @@
 import React from "react";
-import { Categories } from "@api/types/CategoriesTypes";
+import { Categories } from "../../../api/types/CategoriesTypes";
 
 type IProps = {
   category: Categories;

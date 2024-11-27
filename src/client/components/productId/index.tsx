@@ -1,7 +1,7 @@
 import React from "react";
 
-import Button from "@shared/ui/button";
-import useProductId from "@hooks/useProductId";
+import Button from "../../../shared/ui/button";
+import useProductId from "../../../hooks/useProductId";
 import { useLocation } from "react-router-dom";
 
 const ProductId: React.FC = () => {

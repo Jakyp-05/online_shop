@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { GoArrowLeft } from "react-icons/go";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
-import useRegister from "@/client/hooks/useRegister";
+import useRegister from "../../../../client/hooks/useRegister";
 
 const Register: React.FC = () => {
   const {

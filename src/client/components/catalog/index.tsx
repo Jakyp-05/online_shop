@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import useProduct from "@hooks/useProduct";
-import useCategories from "@hooks/useCategories";
-import useCategoryParoducts from "@hooks/useCategoryParoducts";
-import { Categories } from "@api/types/CategoriesTypes";
-import { Product } from "@api/types/productTypes";
+import useProduct from "../../../hooks/useProduct";
+import useCategories from "../../../hooks/useCategories";
+import useCategoryParoducts from "../../../hooks/useCategoryParoducts";
+import { Categories } from "../../../api/types/CategoriesTypes";
+import { Product } from "../../../api/types/productTypes";
 
 import MenuButton from "../../ui/menuButton";
 

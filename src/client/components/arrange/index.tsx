@@ -1,9 +1,9 @@
 import React from "react";
-import Total from "./total/Total";
+import Total from "../total/Total";
 
 const Arrange: React.FC = () => {
   return (
-    <div className="arrange container">
+    <section className="arrange container">
       <h1>Оформить заказ</h1>
       <div className="arrange__boxs">
         <div className="arrange__content">
@@ -28,7 +28,7 @@ const Arrange: React.FC = () => {
             <div className="arrange__radio">
               <div className="arrange__deli">
                 <div style={{ display: "flex", gap: "10px" }}>
-                  <input type="radio" />
+                  <input type="checkbox" />
                   <h4>Самовывоз</h4>
                 </div>
                 <p>
@@ -38,7 +38,7 @@ const Arrange: React.FC = () => {
               </div>
               <div className="arrange__deli">
                 <div style={{ display: "flex", gap: "10px" }}>
-                  <input type="radio" />
+                  <input type="checkbox" />
                   <h4>Курьер “Новая почта”</h4>
                 </div>
                 <p>
@@ -57,11 +57,11 @@ const Arrange: React.FC = () => {
             <div className="arrange__radio">
               <div className="arrange__deli">
                 <div style={{ display: "flex", gap: "10px" }}>
-                  <input type="radio" />
+                  <input type="checkbox" />
                   <h4>При получении</h4>
                 </div>
                 <div style={{ display: "flex", gap: "10px" }}>
-                  <input type="radio" />
+                  <input type="checkbox" />
                   <h4>Онлайн-оплата картой</h4>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const Arrange: React.FC = () => {
         </div>
         <Total />
       </div>
-    </div>
+    </section>
   );
 };
 

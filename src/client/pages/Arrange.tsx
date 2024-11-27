@@ -1,4 +1,4 @@
-import Arrange from "../components/arrange";
+import Arrange from "../components/arrange/index";
 
 const ArrangePage = () => {
   return <Arrange />;

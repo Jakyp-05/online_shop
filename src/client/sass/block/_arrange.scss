@@ -5,7 +5,7 @@
   h1 {
     color: rgb(3, 20, 18);
     font-family: "Lora";
-    font-size: 50px;
+    font-size: 42px;
     font-weight: 400;
     line-height: 105.9%;
     text-align: center;
@@ -34,8 +34,8 @@
           gap: 15px;
 
           .arrange__number {
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             background: linear-gradient(
               -36.49deg,
               rgb(11, 63, 55) -8.758%,
@@ -44,7 +44,7 @@
 
             color: rgb(255, 255, 255);
             font-family: "inter";
-            font-size: 30px;
+            font-size: 22px;
             font-weight: 800;
             line-height: 96.4%;
 
@@ -56,7 +56,7 @@
           h3 {
             color: rgb(3, 20, 18);
             font-family: "inter";
-            font-size: 27px;
+            font-size: 23px;
             font-weight: 500;
             line-height: 96.4%;
           }
@@ -68,16 +68,17 @@
           gap: 10px;
 
           input {
-            width: 327px;
-            height: 50px;
+            width: 300px;
+            height: 40px;
             border: 1px solid rgba(0, 0, 0, 0.247);
             border-radius: 5px;
             color: #000;
             font-family: "inter";
-            font-size: 18px;
-            font-weight: 600;
+            font-size: 15px;
+            font-weight: 400;
             line-height: 96.4%;
             padding-left: 8px;
+            letter-spacing: 0.5px;
           }
         }
 
@@ -107,7 +108,7 @@
               background-clip: text;
               font-family: "inter";
               font-size: 20px;
-              font-weight: 800;
+              font-weight: 500;
               line-height: 96.4%;
               letter-spacing: 0%;
               text-align: center;

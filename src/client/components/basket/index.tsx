@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Basket: React.FC = () => {
   return (
@@ -58,7 +59,9 @@ const Basket: React.FC = () => {
               <span>1000$</span>
             </div>
 
-            <button>Order</button>
+            <Link to="/arrange">
+              <button>Order</button>
+            </Link>
           </div>
         </div>
 

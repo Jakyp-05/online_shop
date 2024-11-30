@@ -5,12 +5,13 @@ import { getProductsCategoryAction } from "../getProductCategory/action";
 import { getProductSortAction } from "../getProductSort/action";
 import { getAllProductsAction } from "./action";
 import { productsState } from "./type";
+import { getProductpaginationAction } from "store/pagination/action";
 
 const initialState: productsState = {
   products: [],
   sortBy: "",
   order: "asc",
-  total: 0,
+  total: 194,
   skip: 0,
   limit: 30,
   status: "idle",
@@ -75,6 +76,20 @@ const productSlice = createSlice({
       .addCase(getProductSortAction.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message || "An unknown error occurred";
+      })
+      .addCase(getProductpaginationAction.pending, (state) => {
+        state.status = "loading";
+      })
+      .addCase(
+        getProductpaginationAction.fulfilled,
+        (state, action: PayloadAction<Products["products"]>) => {
+          state.status = "succeeded";
+          state.products = action.payload;
+        }
+      )
+      .addCase(getProductpaginationAction.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message || "Failed to fetch";
       });
   },
 });

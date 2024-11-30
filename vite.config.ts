@@ -17,14 +17,14 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-      '@admin': path.resolve(__dirname, 'src/admin'),
-      '@api': path.resolve(__dirname, 'src/api'),
-      '@client': path.resolve(__dirname, 'src/client'),
-      '@hooks': path.resolve(__dirname, 'src/hooks'),
-      '@interface': path.resolve(__dirname, 'src/interface'),
-      '@shared': path.resolve(__dirname, 'src/shared'),
-      '@store': path.resolve(__dirname, 'src/store'),
+      '@': path.resolve(__dirname, '/src'),
+      '@admin': path.resolve(__dirname, '/src/admin'),
+      '@api': path.resolve(__dirname, '/src/api'),
+      '@client': path.resolve(__dirname, '/src/client'),
+      '@hooks': path.resolve(__dirname, '/src/hooks'),
+      '@interface': path.resolve(__dirname, '/src/interface'),
+      '@shared': path.resolve(__dirname, '/src/shared'),
+      '@store': path.resolve(__dirname, '/src/store'),
     },
   },
 });

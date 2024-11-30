@@ -4,11 +4,14 @@
     "module": "ESNext",
     "jsx": "react-jsx",
     "strict": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
     "allowImportingTsExtensions": true,
-    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "baseUrl": "./src",
     "paths": {
       "@/*": ["src/*"],
@@ -19,9 +22,7 @@
       "@interface/*": ["src/interface/*"],
       "@shared/*": ["src/shared/*"],
       "@store/*": ["src/store/*"]
-    },
-    "noEmit": true
+    }
   },
-  "include": ["src/**/*"],
-  "exclude": ["mode_modules", "dist"]
+  "exclude": ["node_modules", "dist"]
 }

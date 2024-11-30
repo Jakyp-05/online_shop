@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import useProduct from "../../../hooks/useProduct";
-import useCategories from "../../../hooks/useCategories";
-import useCategoryParoducts from "../../../hooks/useCategoryParoducts";
-import { Categories } from "../../../api/types/CategoriesTypes";
-import { Product } from "../../../api/types/productTypes";
+import useProduct from "hooks/useProduct";
+import useCategories from "hooks/useCategories";
+import useCategoryParoducts from "hooks/useCategoryParoducts";
+import { Categories } from "api/types/CategoriesTypes";
+import { Product } from "api/types/productTypes";
+import Pagination from "../../../shared/ui/pagination";
 
 import MenuButton from "../../ui/menuButton";
 
@@ -13,9 +14,11 @@ import CardSkeleton from "../cardSkeleton";
 import Card from "../card";
 import CategoriesCom from "../categories";
 import Sort from "../sort";
+import { it } from "node:test";
 
 const Catalog: React.FC = () => {
-  const { products, status, error } = useProduct();
+  const { products, status, error, total } = useProduct();
+  const [currentPage, setCurrentPage] = useState(1);
   const { categories } = useCategories();
   const {
     ref,
@@ -27,6 +30,12 @@ const Catalog: React.FC = () => {
   } = useCategoryParoducts();
 
   if (error) return <div>Error {error}</div>;
+  console.log(total, "------");
+  console.log("-----------");
+
+  const itemsPage = 30;
+
+  const totalPages = Math.ceil(total / itemsPage);
 
   return (
     <section className="catalog">
@@ -87,6 +96,11 @@ const Catalog: React.FC = () => {
             {products.map((item: Product) => (
               <Card key={item.id} item={item} isCatalog={true} />
             ))}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={(page) => setCurrentPage(page)}
+            />
           </ul>
         </div>
       </div>

@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": true, // Требуется для Vite
+    "noEmit": true // Запрет на генерацию файлов
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
